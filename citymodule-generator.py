@@ -1,6 +1,7 @@
 import sys
 import pandas as pd
 import chardet
+import json
 
 if len(sys.argv) < 3:
     print("Usage python citymodule-generator.py <tenant-id> <state-data-file-path>")
@@ -26,4 +27,28 @@ if df[healthCenterColName].duplicated().any():
     raise ValueError("Duplicate values found in Health Center Name column!")
 
 
+cityModuleMdms = {
+        "tenantId": tenant_id,
+        "moduleName": "tenant",
+        "citymodule": [
+            {
+                "module": "HRMS",
+                "code": "HRMS",
+                "active": True,
+                "order": 2,
+                "tenants": city_codes
+                },
+            {
+                "module": "IM",
+                "code": "IM",
+                "bannerImage": "https://egov-uat-assets.s3.amazonaws.com/PGR.png",
+                "active": True,
+                "order": 2,
+                "tenants": city_codes
+                }
+            ]
+        }
+
+with open("citymodule.json", "w") as f:
+    json.dump(cityModuleMdms, f, indent=4)
 
