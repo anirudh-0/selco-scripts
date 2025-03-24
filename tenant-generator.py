@@ -10,12 +10,12 @@ if len(sys.argv) < 3:
     sys.exit(1)
 
 tenant_id = sys.argv[1]
+print(f"processing for tenant id: {tenant_id}")
 
 with open(sys.argv[2], "rb") as f:
     result = chardet.detect(f.read(100000))
     print(result)
 
-print(f"processing for tenant id: {tenant_id}")
 
 # columns
 health_center_col_name_old = "Health Centre Name"
@@ -24,6 +24,7 @@ district_col_name_old = "District"
 block_col_name_old = "Block"
 contact_col_name_old = "HC PoC Contact number"
 username_col_name_old = "HFR ID / NIN (username)"
+poc_name_col_name_old = "HC PoC Name"
 
 # renamed
 health_center_col_name = "health_center_name"
@@ -32,6 +33,7 @@ district_col_name = "district"
 block_col_name = "block"
 contact_col_name = "contact"
 username_col_name = "username"
+poc_name_col_name = "poc_name"
 # additional
 health_center_code = "health_center_code"
 district_code = "district_code"
@@ -59,6 +61,7 @@ df = df.filter(
         block_col_name_old,
         contact_col_name_old,
         username_col_name_old,
+        poc_name_col_name_old,
     ]
 )
 
@@ -70,6 +73,7 @@ df = df.rename(
         block_col_name_old: block_col_name,
         contact_col_name_old: contact_col_name,
         username_col_name_old: username_col_name,
+        poc_name_col_name_old: poc_name_col_name,
     }
 )
 
@@ -79,18 +83,19 @@ df[district_col_name] = df[district_col_name].str.strip()
 df[block_col_name] = df[block_col_name].str.strip()
 df[contact_col_name] = df[contact_col_name].astype(str).str.strip()
 df[username_col_name] = df[username_col_name].astype(str).str.strip()
+df[poc_name_col_name] = df[poc_name_col_name].astype(str).str.strip()
 
 df[health_center_code] = (
     df[health_center_col_name]
     .str.lower()
-    .str.replace(r"\s+", "-", regex=True)
+    .str.replace(r"\s+", "", regex=True)
     .apply(lambda x: f"{tenant_id}.{x}")
 )
 df[district_code] = (
-    df[district_col_name].str.upper().str.replace(r"\s+", "-", regex=True)
+    df[district_col_name].str.upper().str.replace(r"\s+", "", regex=True)
 )
 df[block_code] = df[[district_col_name, block_col_name]].apply(
-    lambda x: f"{re.sub(r"\s+", "-", x[district_col_name].lower())}.{re.sub(r"\s+", "-", x[block_col_name].lower())}",
+    lambda x: f"{re.sub(r"\s+", "", x[district_col_name].lower())}.{re.sub(r"\s+", "", x[block_col_name].lower())}",
     axis=1,
 )
 
@@ -115,15 +120,16 @@ state_df = pd.DataFrame(
         district_code: [None],
         block_code: [None],
         username_col_name: [None],
+        poc_name_col_name: [None],
     }
 )
 
-df = pd.concat([state_df, df], ignore_index=True)
+full_df = pd.concat([state_df, df], ignore_index=True)
 
 tenant_module_mdms = {
     "tenantId": tenant_id,
     "moduleName": "tenant",
-    "tenants": df.apply(
+    "tenants": full_df.apply(
         lambda x: {
             "code": x[health_center_code],
             "name": x[health_center_col_name],
@@ -167,3 +173,55 @@ tenant_module_mdms = {
 
 with open("tenants.json", "w") as f:
     json.dump(tenant_module_mdms, f, indent=4)
+
+
+print(df.columns)
+
+df["Employees__employeeStatus"] = "EMPLOYED"
+df["Employees__user__relationship"] = "FATHER"
+df["Employees__user__gender"] = "MALE"
+df["Employees__user__dob"] = "760645800001"
+df["Employees__user__roles__code"] = "EMPLOYEE,COMPLAINANT"
+df["Employees__dateOfAppointment"] = "1617215400001"
+df["Employees__employeeType"] = "PERMANENT"
+df["Employees__assignments__toDate"] = "null"
+df["Employees__assignments__isCurrentAssignment"] = "TRUE"
+df["Employees__assignments__department"] = "DEPT_1"
+df["Employees__assignments__designation"] = "DESIG_01"
+df["Employees__assignments__isHOD"] = "false"
+
+df = df.rename(
+    columns={
+        health_center_code: "Employees__tenantId",
+        username_col_name: "Employees__code",
+        poc_name_col_name: "Employees__user__name",
+        contact_col_name: "Employees__user__mobileNumber",
+        health_center_col_name: "Employees__user__fatherOrHusbandName",
+    }
+)
+
+cols_to_keep = [
+    "Employees__tenantId",
+    "Employees__employeeStatus",
+    "Employees__user__name",
+    "Employees__user__mobileNumber",
+    "Employees__user__fatherOrHusbandName",
+    "Employees__user__relationship",
+    "Employees__user__gender",
+    "Employees__user__dob",
+    "Employees__user__roles__code",
+    "Employees__code",
+    "Employees__dateOfAppointment",
+    "Employees__employeeType",
+    "Employees__assignments__toDate",
+    "Employees__assignments__isCurrentAssignment",
+    "Employees__assignments__department",
+    "Employees__assignments__designation",
+    "Employees__assignments__isHOD",
+]
+
+df = df[cols_to_keep]
+
+print(df)
+
+df.to_excel("output.xlsx", sheet_name="jsonxsl", index=False)

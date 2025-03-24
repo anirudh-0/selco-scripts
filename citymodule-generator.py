@@ -8,19 +8,30 @@ if len(sys.argv) < 3:
     sys.exit(1)
 
 tenant_id = sys.argv[1]
+print(f"processing for tenant id: {tenant_id}")
 
 with open(sys.argv[2], "rb") as f:
     result = chardet.detect(f.read(100000))
     print(result)
 
-print(f"processing for tenant id: {tenant_id}")
 healthCenterColName = "health_center_name"
 df = pd.read_csv(sys.argv[2], usecols=["Health Centre Name"], encoding=result["encoding"])
 df = df.rename(columns={"Health Centre Name": healthCenterColName })
 
 
-df[healthCenterColName] = df[healthCenterColName].str.strip().str.lower().str.replace(r"\s+", "-", regex=True)
+df[healthCenterColName] = df[healthCenterColName].str.strip().str.lower().str.replace(r"\s+", "", regex=True)
 city_codes = df[healthCenterColName].apply(lambda x: {"code": f"{tenant_id}.{x}"}).tolist()
+
+
+filtered_df = df[~df[healthCenterColName].str.match(r'^[a-zA-Z.]+$')]
+
+
+
+# comment below if you have to manually fix post generation
+if len(filtered_df) > 0:
+    print(filtered_df)
+    raise ValueError("Invalid PHC names")
+
 
 # Validate unique values in a single column
 if df[healthCenterColName].duplicated().any():
