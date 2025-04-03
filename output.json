@@ -1,0 +1,1613 @@
+{
+    "tenantId": "nl",
+    "moduleName": "tenant",
+    "citymodule": [
+        {
+            "module": "HRMS",
+            "code": "HRMS",
+            "active": true,
+            "order": 2,
+            "tenants": [
+                {
+                    "code": "nl.aoyimkum-hwc"
+                },
+                {
+                    "code": "nl.aoyimti-hwc"
+                },
+                {
+                    "code": "nl.lengrijan-sc"
+                },
+                {
+                    "code": "nl.pherima-phc"
+                },
+                {
+                    "code": "nl.rilan-hwc"
+                },
+                {
+                    "code": "nl.samaguri-hwc"
+                },
+                {
+                    "code": "nl.signal-angami-sc"
+                },
+                {
+                    "code": "nl.town-sc"
+                },
+                {
+                    "code": "nl.akito-phc"
+                },
+                {
+                    "code": "nl.hovishe-hwc"
+                },
+                {
+                    "code": "nl.khaghaboto-hwc"
+                },
+                {
+                    "code": "nl.l-vihoto-hwc"
+                },
+                {
+                    "code": "nl.old-showuba-sc"
+                },
+                {
+                    "code": "nl.zukihe-hwc"
+                },
+                {
+                    "code": "nl.zutoi-hwc"
+                },
+                {
+                    "code": "nl.zuvukhu-sc"
+                },
+                {
+                    "code": "nl.azailong-phc"
+                },
+                {
+                    "code": "nl.benreu-hwc"
+                },
+                {
+                    "code": "nl.ikiesingra-hwc"
+                },
+                {
+                    "code": "nl.jalukie-zangdi-hwc"
+                },
+                {
+                    "code": "nl.lalong-sc"
+                },
+                {
+                    "code": "nl.mbaulwa-phc"
+                },
+                {
+                    "code": "nl.mpai-ahwc"
+                },
+                {
+                    "code": "nl.nsong-hwc"
+                },
+                {
+                    "code": "nl.pedi-hwc"
+                },
+                {
+                    "code": "nl.punglwa-hwc"
+                },
+                {
+                    "code": "nl.saijang-sc"
+                },
+                {
+                    "code": "nl.chedema-hwc"
+                },
+                {
+                    "code": "nl.apukito-sc"
+                },
+                {
+                    "code": "nl.asukhomi-sc"
+                },
+                {
+                    "code": "nl.asukhuto-sc-hwc"
+                },
+                {
+                    "code": "nl.asukiqa-hwc"
+                },
+                {
+                    "code": "nl.ghokhuvi-sc-hwc"
+                },
+                {
+                    "code": "nl.ghokimi-sc"
+                },
+                {
+                    "code": "nl.kathara-sc"
+                },
+                {
+                    "code": "nl.khukishe-sc-hwc"
+                },
+                {
+                    "code": "nl.kichilimi-hwc"
+                },
+                {
+                    "code": "nl.kitami-sc"
+                },
+                {
+                    "code": "nl.kivikhu-sc-hwc"
+                },
+                {
+                    "code": "nl.littami-sc-hwc"
+                },
+                {
+                    "code": "nl.lizumi-sc"
+                },
+                {
+                    "code": "nl.lumami-sc-hwc"
+                },
+                {
+                    "code": "nl.lutshumi-sc"
+                },
+                {
+                    "code": "nl.natsumi-hwc"
+                },
+                {
+                    "code": "nl.philimi-sc"
+                },
+                {
+                    "code": "nl.phuyetomi-sc"
+                },
+                {
+                    "code": "nl.sapotimi-ahwc"
+                },
+                {
+                    "code": "nl.saptiqa-phc"
+                },
+                {
+                    "code": "nl.satami-hwc"
+                },
+                {
+                    "code": "nl.shesulimi-hwc"
+                },
+                {
+                    "code": "nl.shitsumi-hwc"
+                },
+                {
+                    "code": "nl.shoipu-schwc"
+                },
+                {
+                    "code": "nl.sukhai-sc"
+                },
+                {
+                    "code": "nl.thakiye-sc"
+                },
+                {
+                    "code": "nl.tokiye-phc"
+                },
+                {
+                    "code": "nl.tokizhe-sc"
+                },
+                {
+                    "code": "nl.tsaphimi-sc"
+                },
+                {
+                    "code": "nl.sukhalu-hwc"
+                },
+                {
+                    "code": "nl.yehemi-hwc"
+                },
+                {
+                    "code": "nl.yezashimi-sc"
+                },
+                {
+                    "code": "nl.akhegwo-phc"
+                },
+                {
+                    "code": "nl.avakhung-sc"
+                },
+                {
+                    "code": "nl.chepoketa-hwc"
+                },
+                {
+                    "code": "nl.chetheba-phc"
+                },
+                {
+                    "code": "nl.chobama/tsupfume-hwc-sc"
+                },
+                {
+                    "code": "nl.chokriba-hwc"
+                },
+                {
+                    "code": "nl.gidemi-sc"
+                },
+                {
+                    "code": "nl.hutsu-phc"
+                },
+                {
+                    "code": "nl.k.bawe-ahwc"
+                },
+                {
+                    "code": "nl.kanjang-schwc"
+                },
+                {
+                    "code": "nl.ketsapo-hwc-sc"
+                },
+                {
+                    "code": "nl.khesomi-village-sc"
+                },
+                {
+                    "code": "nl.khezhakeno-phc"
+                },
+                {
+                    "code": "nl.khomi-middle-hwc"
+                },
+                {
+                    "code": "nl.khumis\u00fc-ahwc"
+                },
+                {
+                    "code": "nl.khutsokhuno-sc"
+                },
+                {
+                    "code": "nl.khuza-phc"
+                },
+                {
+                    "code": "nl.kikruma-phc"
+                },
+                {
+                    "code": "nl.kizari-schwc"
+                },
+                {
+                    "code": "nl.l.-kami-hwc"
+                },
+                {
+                    "code": "nl.lanezho-sc"
+                },
+                {
+                    "code": "nl.lephori-phc"
+                },
+                {
+                    "code": "nl.leshemi-sc-hwc"
+                },
+                {
+                    "code": "nl.losami-sc-hwc"
+                },
+                {
+                    "code": "nl.matikhru-hwc"
+                },
+                {
+                    "code": "nl.metsale-schwc"
+                },
+                {
+                    "code": "nl.north-kikruma-ahwc"
+                },
+                {
+                    "code": "nl.phek-village-hwc"
+                },
+                {
+                    "code": "nl.phokhungri-hwc-sc"
+                },
+                {
+                    "code": "nl.reguri-schwc"
+                },
+                {
+                    "code": "nl.suthotsu-sc"
+                },
+                {
+                    "code": "nl.suthozu-nawe-hwc"
+                },
+                {
+                    "code": "nl.sutsu-phc"
+                },
+                {
+                    "code": "nl.thetsumi-phc"
+                },
+                {
+                    "code": "nl.zelome-sc"
+                },
+                {
+                    "code": "nl.chomi-hwc"
+                },
+                {
+                    "code": "nl.pungro"
+                },
+                {
+                    "code": "nl.longya-sc"
+                },
+                {
+                    "code": "nl.metonger-sc"
+                },
+                {
+                    "code": "nl.phisami-hwc"
+                },
+                {
+                    "code": "nl.pokphur-hwc"
+                },
+                {
+                    "code": "nl.purrur-hwc"
+                },
+                {
+                    "code": "nl.sangkhumti-hwc"
+                },
+                {
+                    "code": "nl.sanphure-hwc"
+                },
+                {
+                    "code": "nl.seyochung-village-hwc"
+                },
+                {
+                    "code": "nl.sitimi-phc"
+                },
+                {
+                    "code": "nl.thazuvi-hwc"
+                },
+                {
+                    "code": "nl.yingshikiur-ahwc"
+                },
+                {
+                    "code": "nl.zimkiur-sc"
+                },
+                {
+                    "code": "nl.choknyu-hwc"
+                },
+                {
+                    "code": "nl.socunoma-sc-hwc"
+                },
+                {
+                    "code": "nl.tsiepama-hwc"
+                },
+                {
+                    "code": "nl.jharnapani"
+                },
+                {
+                    "code": "nl.vidima-hwc"
+                },
+                {
+                    "code": "nl.7th-mile-hwc"
+                },
+                {
+                    "code": "nl.tenyiphe-i-hwc"
+                },
+                {
+                    "code": "nl.thilixu-hwc"
+                },
+                {
+                    "code": "nl.diphupar-a-hwc"
+                },
+                {
+                    "code": "nl.zhuikhu-phc"
+                },
+                {
+                    "code": "nl.yajang-c-hwc"
+                },
+                {
+                    "code": "nl.kubolong-hwc"
+                },
+                {
+                    "code": "nl.setts\u00fc-hwc"
+                },
+                {
+                    "code": "nl.moayimti-sc"
+                },
+                {
+                    "code": "nl.medemyim-sc"
+                },
+                {
+                    "code": "nl.meyilong-sc"
+                },
+                {
+                    "code": "nl.moalenden-sc"
+                },
+                {
+                    "code": "nl.aongza-sc"
+                },
+                {
+                    "code": "nl.mongchen-ahwc"
+                },
+                {
+                    "code": "nl.yisemyong-hwc"
+                },
+                {
+                    "code": "nl.changtongya-hwc"
+                },
+                {
+                    "code": "nl.chungliyimsen-bd-sc"
+                },
+                {
+                    "code": "nl.sungkomen-sc"
+                },
+                {
+                    "code": "nl.kupza-awhc"
+                },
+                {
+                    "code": "nl.kumlong-sc-ahwc"
+                },
+                {
+                    "code": "nl.aosenden-hwc"
+                },
+                {
+                    "code": "nl.khensa-sc-hwc"
+                },
+                {
+                    "code": "nl.longnak-hwc"
+                },
+                {
+                    "code": "nl.satsu-sc"
+                },
+                {
+                    "code": "nl.kelingmen-ahwc"
+                },
+                {
+                    "code": "nl.nokpu-hwc"
+                },
+                {
+                    "code": "nl.lirmen-hwc"
+                },
+                {
+                    "code": "nl.chuchuyimpang-big-dispensary-sc"
+                },
+                {
+                    "code": "nl.waromung-hwc"
+                },
+                {
+                    "code": "nl.salulamang-hwc"
+                },
+                {
+                    "code": "nl.kinunger-sc"
+                },
+                {
+                    "code": "nl.longkhum-phc"
+                },
+                {
+                    "code": "nl.tsurangkong-phc"
+                },
+                {
+                    "code": "nl.mangmetong-phc"
+                },
+                {
+                    "code": "nl.lakhuni-phc"
+                },
+                {
+                    "code": "nl.longsa-phc"
+                },
+                {
+                    "code": "nl.yimpang-hwc"
+                },
+                {
+                    "code": "nl.tsurongto-schwc"
+                },
+                {
+                    "code": "nl.hakchang-hwc"
+                },
+                {
+                    "code": "nl.trongar-hwc"
+                },
+                {
+                    "code": "nl.sangchen-schwc"
+                },
+                {
+                    "code": "nl.konya-sc"
+                },
+                {
+                    "code": "nl.sipongsang-sc"
+                },
+                {
+                    "code": "nl.yali-sc"
+                },
+                {
+                    "code": "nl.khudei-sc-hwc"
+                },
+                {
+                    "code": "nl.alisopur-sc"
+                },
+                {
+                    "code": "nl.y.anner-sc-hwc"
+                },
+                {
+                    "code": "nl.uhc-sc"
+                },
+                {
+                    "code": "nl.helipong-schwc"
+                },
+                {
+                    "code": "nl.kejok-schwc"
+                },
+                {
+                    "code": "nl.holongba-hwc"
+                },
+                {
+                    "code": "nl.chungtor-schwc"
+                },
+                {
+                    "code": "nl.chingmelen-sc"
+                },
+                {
+                    "code": "nl.taknyu-sc"
+                },
+                {
+                    "code": "nl.yikhum-hwc"
+                },
+                {
+                    "code": "nl.old-riphyim-hwc"
+                },
+                {
+                    "code": "nl.meriyan-sc-hwc"
+                },
+                {
+                    "code": "nl.tsopo-sub-centre"
+                },
+                {
+                    "code": "nl.morakjo-s/c"
+                },
+                {
+                    "code": "nl.yonchucho-sc"
+                },
+                {
+                    "code": "nl.new-tssori-hwc"
+                },
+                {
+                    "code": "nl.sankiton-sc"
+                },
+                {
+                    "code": "nl.elumyo"
+                },
+                {
+                    "code": "nl.longsachung."
+                },
+                {
+                    "code": "nl.changpang-hwc"
+                },
+                {
+                    "code": "nl.mungya-hwc"
+                },
+                {
+                    "code": "nl.liphiahwc"
+                },
+                {
+                    "code": "nl.wokha-uphc"
+                },
+                {
+                    "code": "nl.yanmhon-phc"
+                },
+                {
+                    "code": "nl.yimpang-phc"
+                },
+                {
+                    "code": "nl.phc-nyiro"
+                },
+                {
+                    "code": "nl.kezo-town-ahwc"
+                },
+                {
+                    "code": "nl.tseisema-hwc"
+                },
+                {
+                    "code": "nl.seiyhama-hwc"
+                },
+                {
+                    "code": "nl.phekerkriema-hwc"
+                },
+                {
+                    "code": "nl.gariphema-hwc"
+                },
+                {
+                    "code": "nl.nerhema-hwc"
+                },
+                {
+                    "code": "nl.keyake-ahwc-sc"
+                },
+                {
+                    "code": "nl.seithogei-sc"
+                },
+                {
+                    "code": "nl.mima-hwc"
+                },
+                {
+                    "code": "nl.thizama-hwc-sc"
+                },
+                {
+                    "code": "nl.meriema-hwc-sc"
+                },
+                {
+                    "code": "nl.sc.-college-hwc"
+                },
+                {
+                    "code": "nl.peducha-hwc"
+                },
+                {
+                    "code": "nl.kidima-hwc"
+                },
+                {
+                    "code": "nl.ziezou-phc"
+                },
+                {
+                    "code": "nl.mon-village-hwc"
+                },
+                {
+                    "code": "nl.shinnyu-sc"
+                },
+                {
+                    "code": "nl.chingkao-chingha-hwc"
+                },
+                {
+                    "code": "nl.yei-sc"
+                },
+                {
+                    "code": "nl.pongching-sc"
+                },
+                {
+                    "code": "nl.hukphang-sc"
+                },
+                {
+                    "code": "nl.oushok-sc"
+                },
+                {
+                    "code": "nl.orangkong-sc"
+                },
+                {
+                    "code": "nl.nyang-sc-hwc"
+                },
+                {
+                    "code": "nl.bhumnyu-hwc"
+                },
+                {
+                    "code": "nl.yongshei-hwc"
+                },
+                {
+                    "code": "nl.yangching-hwc"
+                },
+                {
+                    "code": "nl.yokao-sc-hwc"
+                },
+                {
+                    "code": "nl.langnok-sc-hwc"
+                },
+                {
+                    "code": "nl.high-school-sc"
+                },
+                {
+                    "code": "nl.noklak-village-sc"
+                },
+                {
+                    "code": "nl.thoktsur-sc-hwc"
+                },
+                {
+                    "code": "nl.kingniu-sc-hwc"
+                },
+                {
+                    "code": "nl.choklangan-sc-hwc"
+                },
+                {
+                    "code": "nl.peshu-sc-hwc"
+                },
+                {
+                    "code": "nl.lengnyu-sc-hwc"
+                },
+                {
+                    "code": "nl.thonoknyu-village-sc"
+                },
+                {
+                    "code": "nl.pang-sc-hwc"
+                },
+                {
+                    "code": "nl.aniashu-ahwc"
+                },
+                {
+                    "code": "nl.dan-phc"
+                },
+                {
+                    "code": "nl.nsunyu-sc"
+                },
+                {
+                    "code": "nl.rengmapani-hwc"
+                },
+                {
+                    "code": "nl.tsosinyu-hwc"
+                },
+                {
+                    "code": "nl.ehunnu-hwc"
+                },
+                {
+                    "code": "nl.sendenyu-hwc"
+                },
+                {
+                    "code": "nl.kandinu-ahwc"
+                },
+                {
+                    "code": "nl.phenwhenyu-hwc"
+                },
+                {
+                    "code": "nl.changnyu-sub-centre"
+                },
+                {
+                    "code": "nl.chenwetnyu-sub-centre"
+                },
+                {
+                    "code": "nl.chingdang-sub-centre"
+                },
+                {
+                    "code": "nl.chinglong-sub-centre"
+                },
+                {
+                    "code": "nl.choknyu-sub-centre"
+                },
+                {
+                    "code": "nl.chui-sub-centre"
+                },
+                {
+                    "code": "nl.jaboka-sub-centre"
+                },
+                {
+                    "code": "nl.lampongsheanglah-sub-centre"
+                },
+                {
+                    "code": "nl.langmeang-sub-centre"
+                },
+                {
+                    "code": "nl.longshen-sub-centre"
+                },
+                {
+                    "code": "nl.longzang-sub-centre"
+                },
+                {
+                    "code": "nl.nokyan-sub-centre"
+                },
+                {
+                    "code": "nl.tanhai-sub-centre"
+                },
+                {
+                    "code": "nl.uppertiru-sub-centre"
+                },
+                {
+                    "code": "nl.wangla-sub-centre"
+                },
+                {
+                    "code": "nl.wakching-chingla"
+                },
+                {
+                    "code": "nl.aopao-hwc"
+                },
+                {
+                    "code": "nl.changlang-hwc"
+                },
+                {
+                    "code": "nl.chaohachingnyu-hwc"
+                },
+                {
+                    "code": "nl.chenloisho-hwc"
+                },
+                {
+                    "code": "nl.jakphang-hwc"
+                },
+                {
+                    "code": "nl.mohung-hwc"
+                },
+                {
+                    "code": "nl.tamkoang-hwc"
+                },
+                {
+                    "code": "nl.wangti-hwc"
+                },
+                {
+                    "code": "nl.yannu-hwc"
+                },
+                {
+                    "code": "nl.yonghong-hwc"
+                },
+                {
+                    "code": "nl.chingkao-phc"
+                },
+                {
+                    "code": "nl.shangnyu-phc"
+                },
+                {
+                    "code": "nl.yongkhao-phc"
+                },
+                {
+                    "code": "nl.tokok-chingnyu-sc"
+                },
+                {
+                    "code": "nl.angphang-phc"
+                },
+                {
+                    "code": "nl.changlangshu-phc"
+                },
+                {
+                    "code": "nl.mopong-phc"
+                }
+            ]
+        },
+        {
+            "module": "IM",
+            "code": "IM",
+            "bannerImage": "https://egov-uat-assets.s3.amazonaws.com/PGR.png",
+            "active": true,
+            "order": 2,
+            "tenants": [
+                {
+                    "code": "nl.aoyimkum-hwc"
+                },
+                {
+                    "code": "nl.aoyimti-hwc"
+                },
+                {
+                    "code": "nl.lengrijan-sc"
+                },
+                {
+                    "code": "nl.pherima-phc"
+                },
+                {
+                    "code": "nl.rilan-hwc"
+                },
+                {
+                    "code": "nl.samaguri-hwc"
+                },
+                {
+                    "code": "nl.signal-angami-sc"
+                },
+                {
+                    "code": "nl.town-sc"
+                },
+                {
+                    "code": "nl.akito-phc"
+                },
+                {
+                    "code": "nl.hovishe-hwc"
+                },
+                {
+                    "code": "nl.khaghaboto-hwc"
+                },
+                {
+                    "code": "nl.l-vihoto-hwc"
+                },
+                {
+                    "code": "nl.old-showuba-sc"
+                },
+                {
+                    "code": "nl.zukihe-hwc"
+                },
+                {
+                    "code": "nl.zutoi-hwc"
+                },
+                {
+                    "code": "nl.zuvukhu-sc"
+                },
+                {
+                    "code": "nl.azailong-phc"
+                },
+                {
+                    "code": "nl.benreu-hwc"
+                },
+                {
+                    "code": "nl.ikiesingra-hwc"
+                },
+                {
+                    "code": "nl.jalukie-zangdi-hwc"
+                },
+                {
+                    "code": "nl.lalong-sc"
+                },
+                {
+                    "code": "nl.mbaulwa-phc"
+                },
+                {
+                    "code": "nl.mpai-ahwc"
+                },
+                {
+                    "code": "nl.nsong-hwc"
+                },
+                {
+                    "code": "nl.pedi-hwc"
+                },
+                {
+                    "code": "nl.punglwa-hwc"
+                },
+                {
+                    "code": "nl.saijang-sc"
+                },
+                {
+                    "code": "nl.chedema-hwc"
+                },
+                {
+                    "code": "nl.apukito-sc"
+                },
+                {
+                    "code": "nl.asukhomi-sc"
+                },
+                {
+                    "code": "nl.asukhuto-sc-hwc"
+                },
+                {
+                    "code": "nl.asukiqa-hwc"
+                },
+                {
+                    "code": "nl.ghokhuvi-sc-hwc"
+                },
+                {
+                    "code": "nl.ghokimi-sc"
+                },
+                {
+                    "code": "nl.kathara-sc"
+                },
+                {
+                    "code": "nl.khukishe-sc-hwc"
+                },
+                {
+                    "code": "nl.kichilimi-hwc"
+                },
+                {
+                    "code": "nl.kitami-sc"
+                },
+                {
+                    "code": "nl.kivikhu-sc-hwc"
+                },
+                {
+                    "code": "nl.littami-sc-hwc"
+                },
+                {
+                    "code": "nl.lizumi-sc"
+                },
+                {
+                    "code": "nl.lumami-sc-hwc"
+                },
+                {
+                    "code": "nl.lutshumi-sc"
+                },
+                {
+                    "code": "nl.natsumi-hwc"
+                },
+                {
+                    "code": "nl.philimi-sc"
+                },
+                {
+                    "code": "nl.phuyetomi-sc"
+                },
+                {
+                    "code": "nl.sapotimi-ahwc"
+                },
+                {
+                    "code": "nl.saptiqa-phc"
+                },
+                {
+                    "code": "nl.satami-hwc"
+                },
+                {
+                    "code": "nl.shesulimi-hwc"
+                },
+                {
+                    "code": "nl.shitsumi-hwc"
+                },
+                {
+                    "code": "nl.shoipu-schwc"
+                },
+                {
+                    "code": "nl.sukhai-sc"
+                },
+                {
+                    "code": "nl.thakiye-sc"
+                },
+                {
+                    "code": "nl.tokiye-phc"
+                },
+                {
+                    "code": "nl.tokizhe-sc"
+                },
+                {
+                    "code": "nl.tsaphimi-sc"
+                },
+                {
+                    "code": "nl.sukhalu-hwc"
+                },
+                {
+                    "code": "nl.yehemi-hwc"
+                },
+                {
+                    "code": "nl.yezashimi-sc"
+                },
+                {
+                    "code": "nl.akhegwo-phc"
+                },
+                {
+                    "code": "nl.avakhung-sc"
+                },
+                {
+                    "code": "nl.chepoketa-hwc"
+                },
+                {
+                    "code": "nl.chetheba-phc"
+                },
+                {
+                    "code": "nl.chobama/tsupfume-hwc-sc"
+                },
+                {
+                    "code": "nl.chokriba-hwc"
+                },
+                {
+                    "code": "nl.gidemi-sc"
+                },
+                {
+                    "code": "nl.hutsu-phc"
+                },
+                {
+                    "code": "nl.k.bawe-ahwc"
+                },
+                {
+                    "code": "nl.kanjang-schwc"
+                },
+                {
+                    "code": "nl.ketsapo-hwc-sc"
+                },
+                {
+                    "code": "nl.khesomi-village-sc"
+                },
+                {
+                    "code": "nl.khezhakeno-phc"
+                },
+                {
+                    "code": "nl.khomi-middle-hwc"
+                },
+                {
+                    "code": "nl.khumis\u00fc-ahwc"
+                },
+                {
+                    "code": "nl.khutsokhuno-sc"
+                },
+                {
+                    "code": "nl.khuza-phc"
+                },
+                {
+                    "code": "nl.kikruma-phc"
+                },
+                {
+                    "code": "nl.kizari-schwc"
+                },
+                {
+                    "code": "nl.l.-kami-hwc"
+                },
+                {
+                    "code": "nl.lanezho-sc"
+                },
+                {
+                    "code": "nl.lephori-phc"
+                },
+                {
+                    "code": "nl.leshemi-sc-hwc"
+                },
+                {
+                    "code": "nl.losami-sc-hwc"
+                },
+                {
+                    "code": "nl.matikhru-hwc"
+                },
+                {
+                    "code": "nl.metsale-schwc"
+                },
+                {
+                    "code": "nl.north-kikruma-ahwc"
+                },
+                {
+                    "code": "nl.phek-village-hwc"
+                },
+                {
+                    "code": "nl.phokhungri-hwc-sc"
+                },
+                {
+                    "code": "nl.reguri-schwc"
+                },
+                {
+                    "code": "nl.suthotsu-sc"
+                },
+                {
+                    "code": "nl.suthozu-nawe-hwc"
+                },
+                {
+                    "code": "nl.sutsu-phc"
+                },
+                {
+                    "code": "nl.thetsumi-phc"
+                },
+                {
+                    "code": "nl.zelome-sc"
+                },
+                {
+                    "code": "nl.chomi-hwc"
+                },
+                {
+                    "code": "nl.pungro"
+                },
+                {
+                    "code": "nl.longya-sc"
+                },
+                {
+                    "code": "nl.metonger-sc"
+                },
+                {
+                    "code": "nl.phisami-hwc"
+                },
+                {
+                    "code": "nl.pokphur-hwc"
+                },
+                {
+                    "code": "nl.purrur-hwc"
+                },
+                {
+                    "code": "nl.sangkhumti-hwc"
+                },
+                {
+                    "code": "nl.sanphure-hwc"
+                },
+                {
+                    "code": "nl.seyochung-village-hwc"
+                },
+                {
+                    "code": "nl.sitimi-phc"
+                },
+                {
+                    "code": "nl.thazuvi-hwc"
+                },
+                {
+                    "code": "nl.yingshikiur-ahwc"
+                },
+                {
+                    "code": "nl.zimkiur-sc"
+                },
+                {
+                    "code": "nl.choknyu-hwc"
+                },
+                {
+                    "code": "nl.socunoma-sc-hwc"
+                },
+                {
+                    "code": "nl.tsiepama-hwc"
+                },
+                {
+                    "code": "nl.jharnapani"
+                },
+                {
+                    "code": "nl.vidima-hwc"
+                },
+                {
+                    "code": "nl.7th-mile-hwc"
+                },
+                {
+                    "code": "nl.tenyiphe-i-hwc"
+                },
+                {
+                    "code": "nl.thilixu-hwc"
+                },
+                {
+                    "code": "nl.diphupar-a-hwc"
+                },
+                {
+                    "code": "nl.zhuikhu-phc"
+                },
+                {
+                    "code": "nl.yajang-c-hwc"
+                },
+                {
+                    "code": "nl.kubolong-hwc"
+                },
+                {
+                    "code": "nl.setts\u00fc-hwc"
+                },
+                {
+                    "code": "nl.moayimti-sc"
+                },
+                {
+                    "code": "nl.medemyim-sc"
+                },
+                {
+                    "code": "nl.meyilong-sc"
+                },
+                {
+                    "code": "nl.moalenden-sc"
+                },
+                {
+                    "code": "nl.aongza-sc"
+                },
+                {
+                    "code": "nl.mongchen-ahwc"
+                },
+                {
+                    "code": "nl.yisemyong-hwc"
+                },
+                {
+                    "code": "nl.changtongya-hwc"
+                },
+                {
+                    "code": "nl.chungliyimsen-bd-sc"
+                },
+                {
+                    "code": "nl.sungkomen-sc"
+                },
+                {
+                    "code": "nl.kupza-awhc"
+                },
+                {
+                    "code": "nl.kumlong-sc-ahwc"
+                },
+                {
+                    "code": "nl.aosenden-hwc"
+                },
+                {
+                    "code": "nl.khensa-sc-hwc"
+                },
+                {
+                    "code": "nl.longnak-hwc"
+                },
+                {
+                    "code": "nl.satsu-sc"
+                },
+                {
+                    "code": "nl.kelingmen-ahwc"
+                },
+                {
+                    "code": "nl.nokpu-hwc"
+                },
+                {
+                    "code": "nl.lirmen-hwc"
+                },
+                {
+                    "code": "nl.chuchuyimpang-big-dispensary-sc"
+                },
+                {
+                    "code": "nl.waromung-hwc"
+                },
+                {
+                    "code": "nl.salulamang-hwc"
+                },
+                {
+                    "code": "nl.kinunger-sc"
+                },
+                {
+                    "code": "nl.longkhum-phc"
+                },
+                {
+                    "code": "nl.tsurangkong-phc"
+                },
+                {
+                    "code": "nl.mangmetong-phc"
+                },
+                {
+                    "code": "nl.lakhuni-phc"
+                },
+                {
+                    "code": "nl.longsa-phc"
+                },
+                {
+                    "code": "nl.yimpang-hwc"
+                },
+                {
+                    "code": "nl.tsurongto-schwc"
+                },
+                {
+                    "code": "nl.hakchang-hwc"
+                },
+                {
+                    "code": "nl.trongar-hwc"
+                },
+                {
+                    "code": "nl.sangchen-schwc"
+                },
+                {
+                    "code": "nl.konya-sc"
+                },
+                {
+                    "code": "nl.sipongsang-sc"
+                },
+                {
+                    "code": "nl.yali-sc"
+                },
+                {
+                    "code": "nl.khudei-sc-hwc"
+                },
+                {
+                    "code": "nl.alisopur-sc"
+                },
+                {
+                    "code": "nl.y.anner-sc-hwc"
+                },
+                {
+                    "code": "nl.uhc-sc"
+                },
+                {
+                    "code": "nl.helipong-schwc"
+                },
+                {
+                    "code": "nl.kejok-schwc"
+                },
+                {
+                    "code": "nl.holongba-hwc"
+                },
+                {
+                    "code": "nl.chungtor-schwc"
+                },
+                {
+                    "code": "nl.chingmelen-sc"
+                },
+                {
+                    "code": "nl.taknyu-sc"
+                },
+                {
+                    "code": "nl.yikhum-hwc"
+                },
+                {
+                    "code": "nl.old-riphyim-hwc"
+                },
+                {
+                    "code": "nl.meriyan-sc-hwc"
+                },
+                {
+                    "code": "nl.tsopo-sub-centre"
+                },
+                {
+                    "code": "nl.morakjo-s/c"
+                },
+                {
+                    "code": "nl.yonchucho-sc"
+                },
+                {
+                    "code": "nl.new-tssori-hwc"
+                },
+                {
+                    "code": "nl.sankiton-sc"
+                },
+                {
+                    "code": "nl.elumyo"
+                },
+                {
+                    "code": "nl.longsachung."
+                },
+                {
+                    "code": "nl.changpang-hwc"
+                },
+                {
+                    "code": "nl.mungya-hwc"
+                },
+                {
+                    "code": "nl.liphiahwc"
+                },
+                {
+                    "code": "nl.wokha-uphc"
+                },
+                {
+                    "code": "nl.yanmhon-phc"
+                },
+                {
+                    "code": "nl.yimpang-phc"
+                },
+                {
+                    "code": "nl.phc-nyiro"
+                },
+                {
+                    "code": "nl.kezo-town-ahwc"
+                },
+                {
+                    "code": "nl.tseisema-hwc"
+                },
+                {
+                    "code": "nl.seiyhama-hwc"
+                },
+                {
+                    "code": "nl.phekerkriema-hwc"
+                },
+                {
+                    "code": "nl.gariphema-hwc"
+                },
+                {
+                    "code": "nl.nerhema-hwc"
+                },
+                {
+                    "code": "nl.keyake-ahwc-sc"
+                },
+                {
+                    "code": "nl.seithogei-sc"
+                },
+                {
+                    "code": "nl.mima-hwc"
+                },
+                {
+                    "code": "nl.thizama-hwc-sc"
+                },
+                {
+                    "code": "nl.meriema-hwc-sc"
+                },
+                {
+                    "code": "nl.sc.-college-hwc"
+                },
+                {
+                    "code": "nl.peducha-hwc"
+                },
+                {
+                    "code": "nl.kidima-hwc"
+                },
+                {
+                    "code": "nl.ziezou-phc"
+                },
+                {
+                    "code": "nl.mon-village-hwc"
+                },
+                {
+                    "code": "nl.shinnyu-sc"
+                },
+                {
+                    "code": "nl.chingkao-chingha-hwc"
+                },
+                {
+                    "code": "nl.yei-sc"
+                },
+                {
+                    "code": "nl.pongching-sc"
+                },
+                {
+                    "code": "nl.hukphang-sc"
+                },
+                {
+                    "code": "nl.oushok-sc"
+                },
+                {
+                    "code": "nl.orangkong-sc"
+                },
+                {
+                    "code": "nl.nyang-sc-hwc"
+                },
+                {
+                    "code": "nl.bhumnyu-hwc"
+                },
+                {
+                    "code": "nl.yongshei-hwc"
+                },
+                {
+                    "code": "nl.yangching-hwc"
+                },
+                {
+                    "code": "nl.yokao-sc-hwc"
+                },
+                {
+                    "code": "nl.langnok-sc-hwc"
+                },
+                {
+                    "code": "nl.high-school-sc"
+                },
+                {
+                    "code": "nl.noklak-village-sc"
+                },
+                {
+                    "code": "nl.thoktsur-sc-hwc"
+                },
+                {
+                    "code": "nl.kingniu-sc-hwc"
+                },
+                {
+                    "code": "nl.choklangan-sc-hwc"
+                },
+                {
+                    "code": "nl.peshu-sc-hwc"
+                },
+                {
+                    "code": "nl.lengnyu-sc-hwc"
+                },
+                {
+                    "code": "nl.thonoknyu-village-sc"
+                },
+                {
+                    "code": "nl.pang-sc-hwc"
+                },
+                {
+                    "code": "nl.aniashu-ahwc"
+                },
+                {
+                    "code": "nl.dan-phc"
+                },
+                {
+                    "code": "nl.nsunyu-sc"
+                },
+                {
+                    "code": "nl.rengmapani-hwc"
+                },
+                {
+                    "code": "nl.tsosinyu-hwc"
+                },
+                {
+                    "code": "nl.ehunnu-hwc"
+                },
+                {
+                    "code": "nl.sendenyu-hwc"
+                },
+                {
+                    "code": "nl.kandinu-ahwc"
+                },
+                {
+                    "code": "nl.phenwhenyu-hwc"
+                },
+                {
+                    "code": "nl.changnyu-sub-centre"
+                },
+                {
+                    "code": "nl.chenwetnyu-sub-centre"
+                },
+                {
+                    "code": "nl.chingdang-sub-centre"
+                },
+                {
+                    "code": "nl.chinglong-sub-centre"
+                },
+                {
+                    "code": "nl.choknyu-sub-centre"
+                },
+                {
+                    "code": "nl.chui-sub-centre"
+                },
+                {
+                    "code": "nl.jaboka-sub-centre"
+                },
+                {
+                    "code": "nl.lampongsheanglah-sub-centre"
+                },
+                {
+                    "code": "nl.langmeang-sub-centre"
+                },
+                {
+                    "code": "nl.longshen-sub-centre"
+                },
+                {
+                    "code": "nl.longzang-sub-centre"
+                },
+                {
+                    "code": "nl.nokyan-sub-centre"
+                },
+                {
+                    "code": "nl.tanhai-sub-centre"
+                },
+                {
+                    "code": "nl.uppertiru-sub-centre"
+                },
+                {
+                    "code": "nl.wangla-sub-centre"
+                },
+                {
+                    "code": "nl.wakching-chingla"
+                },
+                {
+                    "code": "nl.aopao-hwc"
+                },
+                {
+                    "code": "nl.changlang-hwc"
+                },
+                {
+                    "code": "nl.chaohachingnyu-hwc"
+                },
+                {
+                    "code": "nl.chenloisho-hwc"
+                },
+                {
+                    "code": "nl.jakphang-hwc"
+                },
+                {
+                    "code": "nl.mohung-hwc"
+                },
+                {
+                    "code": "nl.tamkoang-hwc"
+                },
+                {
+                    "code": "nl.wangti-hwc"
+                },
+                {
+                    "code": "nl.yannu-hwc"
+                },
+                {
+                    "code": "nl.yonghong-hwc"
+                },
+                {
+                    "code": "nl.chingkao-phc"
+                },
+                {
+                    "code": "nl.shangnyu-phc"
+                },
+                {
+                    "code": "nl.yongkhao-phc"
+                },
+                {
+                    "code": "nl.tokok-chingnyu-sc"
+                },
+                {
+                    "code": "nl.angphang-phc"
+                },
+                {
+                    "code": "nl.changlangshu-phc"
+                },
+                {
+                    "code": "nl.mopong-phc"
+                }
+            ]
+        }
+    ]
+}

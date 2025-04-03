@@ -1,0 +1,110 @@
+[
+  {
+    "code": "TENANT_TENANTS_PG_KINNER",
+    "message": "Kinner",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_BINAGA",
+    "message": "Binaga",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_SHIRWAD",
+    "message": "Shirwad",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_HEBLE",
+    "message": "Heble",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_BANAVASIB",
+    "message": "Banavasi B",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_UNCHALLI",
+    "message": "Unchalli",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_ULAVI",
+    "message": "Ulavi",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_GUNDA",
+    "message": "Gunda",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_KUMBARAWADA",
+    "message": "Kumbarawada",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_JAGALPET",
+    "message": "Jagalpet",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_DIGGI",
+    "message": "Diggi",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_CASTLEROCK",
+    "message": "Castle Rock",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_RAMANAGAR",
+    "message": "Ramanagar",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_KATUR",
+    "message": "Katur",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_MALAGI",
+    "message": "Malagi",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_HUNAGUNDA",
+    "message": "Hunagunda",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_CHAWATTI",
+    "message": "Chawatti",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  },
+  {
+    "code": "TENANT_TENANTS_PG_VAJRALLI",
+    "message": "Vajralli",
+    "module": "rainmaker-common",
+    "locale": "en_IN"
+  }
+]

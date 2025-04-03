@@ -1,0 +1,48 @@
+{
+  "tenantId": "pg",
+  "moduleName": "Incident",
+  "Block": [
+    {
+      "code": "uttarakannada.karwar",
+      "name": "Karwar",
+      "districtCode": "UTTARAKANNADA",
+      "active": true
+    },
+    {
+      "code": "uttarakannada.bhatkal",
+      "name": "Bhatkal",
+      "districtCode": "UTTARAKANNADA",
+      "active": true
+    },
+    {
+      "code": "uttarakannada.sirsi",
+      "name": "Sirsi",
+      "districtCode": "UTTARAKANNADA",
+      "active": true
+    },
+    {
+      "code": "uttarakannada.sirasi",
+      "name": "Sirasi",
+      "districtCode": "UTTARAKANNADA",
+      "active": true
+    },
+    {
+      "code": "uttarakannada.joida",
+      "name": "Joida",
+      "districtCode": "UTTARAKANNADA",
+      "active": true
+    },
+    {
+      "code": "uttarakannada.mundgod",
+      "name": "Mundgod",
+      "districtCode": "UTTARAKANNADA",
+      "active": true
+    },
+    {
+      "code": "uttarakannada.yellapur",
+      "name": "Yellapur",
+      "districtCode": "UTTARAKANNADA",
+      "active": true
+    }
+  ]
+}

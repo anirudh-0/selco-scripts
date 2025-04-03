@@ -1,0 +1,11 @@
+{
+  "tenantId": "pg",
+  "moduleName": "Incident",
+  "District": [
+    {
+      "code": "UTTARA KANNADA",
+      "name": "Uttara Kannada",
+      "active": true
+    }
+  ]
+}

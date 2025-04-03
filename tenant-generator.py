@@ -1,9 +1,10 @@
+import os
 import sys
 import pandas as pd
 import chardet
 import json
 import re
-import math
+import requests
 
 if len(sys.argv) < 3:
     print("Usage python tenant-generator.py <tenant-id> <state-data-file-path>")
@@ -19,12 +20,17 @@ with open(sys.argv[2], "rb") as f:
 
 # columns
 health_center_col_name_old = "Health Centre Name"
+health_center_col_name_localized = "ಆರೋಗ್ಯ ಕೇಂದ್ರದ ಹೆಸರು"
 type_of_hc_col_name_old = "Type of HC"
 district_col_name_old = "District"
 block_col_name_old = "Block"
-contact_col_name_old = "HC PoC Contact number"
-username_col_name_old = "HFR ID / NIN (username)"
-poc_name_col_name_old = "HC PoC Name"
+# contact_col_name_old = "HC PoC Contact number"
+contact_col_name_old = "Contact"
+# username_col_name_old = "HFR ID / NIN (username)"
+username_col_name_old = "NIN or HFR ID (username)"
+# poc_name_col_name_old = "HC PoC Name"
+poc_name_col_name_old = "POC Name"
+vendor_name_col_name_old = "Vendor name"
 
 # renamed
 health_center_col_name = "health_center_name"
@@ -34,6 +40,8 @@ block_col_name = "block"
 contact_col_name = "contact"
 username_col_name = "username"
 poc_name_col_name = "poc_name"
+vendor_name_col_name = "vendor_name"
+
 # additional
 health_center_code = "health_center_code"
 district_code = "district_code"
@@ -62,6 +70,8 @@ df = df.filter(
         contact_col_name_old,
         username_col_name_old,
         poc_name_col_name_old,
+        vendor_name_col_name_old,
+        health_center_col_name_localized,
     ]
 )
 
@@ -74,6 +84,7 @@ df = df.rename(
         contact_col_name_old: contact_col_name,
         username_col_name_old: username_col_name,
         poc_name_col_name_old: poc_name_col_name,
+        vendor_name_col_name_old: vendor_name_col_name,
     }
 )
 
@@ -84,18 +95,45 @@ df[block_col_name] = df[block_col_name].str.strip()
 df[contact_col_name] = df[contact_col_name].astype(str).str.strip()
 df[username_col_name] = df[username_col_name].astype(str).str.strip()
 df[poc_name_col_name] = df[poc_name_col_name].astype(str).str.strip()
+# df[vendor_name_col_name] = df[vendor_name_col_name].astype(str).str.strip()
+
 
 df[health_center_code] = (
     df[health_center_col_name]
     .str.lower()
     .str.replace(r"\s+", "", regex=True)
+    .str.replace("\u00fc", "u")
+    .str.replace(r"[\/\-\.]", "", regex=True)
     .apply(lambda x: f"{tenant_id}.{x}")
 )
+
+
+# print(df[vendor_name_col_name].unique().tolist())
+
+
+# vendor_tenant_map = (
+#     df.groupby(vendor_name_col_name)[health_center_code]
+#     .agg(list)
+#     .to_json("vendor-tenants-map.json", indent=2)
+# )
+
+
+# with open("vendor-tenants-map.json", "w") as f:
+#     json.dump(vendor_tenant_map, f, indent=2)
+
+
+# sys.exit()
+
+
 df[district_code] = (
     df[district_col_name].str.upper().str.replace(r"\s+", "", regex=True)
 )
 df[block_code] = df[[district_col_name, block_col_name]].apply(
-    lambda x: f"{re.sub(r"\s+", "", x[district_col_name].lower())}.{re.sub(r"\s+", "", x[block_col_name].lower())}",
+    lambda x: re.sub(
+        "/",
+        "",
+        f"{re.sub(r"\s+", "", x[district_col_name].lower())}.{re.sub(r"\s+", "", x[block_col_name].lower())}",
+    ),
     axis=1,
 )
 
@@ -103,8 +141,8 @@ df[block_code] = df[[district_col_name, block_col_name]].apply(
 if df[health_center_col_name].duplicated().any():
     raise ValueError("Duplicate values found in Health Center Name column!")
 
-if not df[type_of_hc_col_name].isin({"HWC", "SC", "PHC"}).all():
-    raise ValueError("Invalid HC Type")
+# if not df[type_of_hc_col_name].isin({"HWC", "SC", "PHC"}).all():
+#     raise ValueError("Invalid HC Type")
 
 if df[username_col_name].isna().any():
     raise ValueError("username is mandatory")
@@ -125,6 +163,13 @@ state_df = pd.DataFrame(
 )
 
 full_df = pd.concat([state_df, df], ignore_index=True)
+
+block_code_filtered_df = df[~df[block_code].str.match(r"^[a-zA-Z.]+$")]
+
+# comment below if you have to manually fix post generation
+if len(block_code_filtered_df) > 0:
+    print(block_code_filtered_df)
+    raise ValueError("Invalid block codes")
 
 tenant_module_mdms = {
     "tenantId": tenant_id,
@@ -171,11 +216,13 @@ tenant_module_mdms = {
 }
 
 
-with open("tenants.json", "w") as f:
-    json.dump(tenant_module_mdms, f, indent=4)
+tenantsFileName = f"output/{tenant_id}/{sys.argv[2]}/tenants.json"
+os.makedirs(os.path.dirname(tenantsFileName), exist_ok=True)
 
 
-print(df.columns)
+with open(tenantsFileName, "w") as f:
+    json.dump(tenant_module_mdms, f, indent=2)
+
 
 df["Employees__employeeStatus"] = "EMPLOYED"
 df["Employees__user__relationship"] = "FATHER"
@@ -190,7 +237,7 @@ df["Employees__assignments__department"] = "DEPT_1"
 df["Employees__assignments__designation"] = "DESIG_01"
 df["Employees__assignments__isHOD"] = "false"
 
-df = df.rename(
+users_df = df.rename(
     columns={
         health_center_code: "Employees__tenantId",
         username_col_name: "Employees__code",
@@ -220,8 +267,176 @@ cols_to_keep = [
     "Employees__assignments__isHOD",
 ]
 
-df = df[cols_to_keep]
+users_df = users_df[cols_to_keep]
 
-print(df)
 
-df.to_excel("output.xlsx", sheet_name="jsonxsl", index=False)
+usersFileName = f"output/{tenant_id}/{sys.argv[2]}/users.xlsx"
+os.makedirs(os.path.dirname(usersFileName), exist_ok=True)
+users_df.to_excel(usersFileName, sheet_name="jsonxsl", index=False)
+
+districts = df[district_col_name].unique()
+
+district_mdms = {
+    "tenantId": tenant_id,
+    "moduleName": "Incident",
+    "District": list(
+        map(lambda x: {"code": x.upper(), "name": x.title(), "active": True}, districts)
+    ),
+}
+
+districtsFileName = f"output/{tenant_id}/{sys.argv[2]}/District.json"
+os.makedirs(os.path.dirname(districtsFileName), exist_ok=True)
+
+with open(districtsFileName, "w") as f:
+    json.dump(district_mdms, f, indent=2)
+
+
+assert block_code in df.columns
+assert block_col_name in df.columns
+assert district_code in df.columns
+
+
+filtered_df = df.drop_duplicates(subset=[block_code], keep="first")
+
+blocks = (
+    filtered_df[[block_code, block_col_name, district_code]]
+    .apply(
+        lambda x: (
+            {
+                "code": x[block_code],
+                "name": x[block_col_name],
+                "districtCode": x[district_code],
+                "active": True,
+            }
+        ),
+        axis=1,
+    )
+    .tolist()
+)
+
+
+block_mdms = {
+    "tenantId": tenant_id,
+    "moduleName": "Incident",
+    "Block": blocks,
+}
+
+blockFileName = f"output/{tenant_id}/{sys.argv[2]}/Block.json"
+os.makedirs(os.path.dirname(blockFileName), exist_ok=True)
+
+with open(blockFileName, "w") as f:
+    json.dump(block_mdms, f, indent=2)
+
+
+def upsert_localization(tenant_id, module, messages):
+    url = "http://localhost:8082/localization/messages/v1/_upsert"
+    payload = json.dumps(
+        {
+            "RequestInfo": {
+                "apiId": "Rainmaker",
+                "ver": ".01",
+                "ts": "",
+                "action": "_create",
+                "did": "1",
+                "key": "",
+                "msgId": "20170310130900|en_IN",
+                "authToken": "0950e4e6-c08d-4f37-9e36-902b1f32d558",
+                "userInfo": {
+                    "id": 100,
+                    "uuid": "80ab5b3b-87d0-44b1-b050-8b44a53e9456",
+                    "userName": "admin",
+                    "name": "admin",
+                    "mobileNumber": "1002335567",
+                    "emailId": None,
+                    "locale": None,
+                    "type": "EMPLOYEE",
+                    "roles": [
+                        {
+                            "name": "EMPLOYEE ADMIN",
+                            "code": "EMPLOYEE_ADMIN",
+                            "tenantId": "nl",
+                        },
+                        {"name": "MDMS ADMIN", "code": "MDMS_ADMIN", "tenantId": "nl"},
+                        {"name": "Super User", "code": "SUPERUSER", "tenantId": "nl"},
+                        {
+                            "name": "Localisation admin",
+                            "code": "LOC_ADMIN",
+                            "tenantId": "nl",
+                        },
+                        {
+                            "name": "Asset Administrator",
+                            "code": "ASSET_ADMINISTRATOR",
+                            "tenantId": "nl",
+                        },
+                        {"name": "HRMS Admin", "code": "HRMS_ADMIN", "tenantId": "nl"},
+                        {
+                            "name": "National Dashboard Admin",
+                            "code": "NATADMIN",
+                            "tenantId": "nl",
+                        },
+                    ],
+                    "active": True,
+                    "tenantId": "nl",
+                    "permanentCity": None,
+                },
+            },
+            "tenantId": tenant_id,
+            "module": module,
+            "locale": "en_IN",
+            "messages": messages,
+        }
+    )
+    headers = {"Content-Type": "application/json"}
+
+    print(payload)
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+    print(response.json())
+
+
+modules = [
+    # "rainmaker-hrms",
+    # "rainmaker-pg", # needs to be done separately as module name itself changes
+    # "rainmaker-im",
+    "rainmaker-common",
+    # "rainmaker-hr",
+]
+
+for module in modules:
+    messages = (
+        df[[health_center_code, health_center_col_name]]
+        .apply(
+            lambda x: (
+                {
+                    "code": f"TENANT_TENANTS_{x[health_center_code].upper().replace(".","_")}",
+                    "message": x[health_center_col_name],
+                    "module": "rainmaker-common",
+                    "locale": "en_IN",
+                }
+                # re.sub("\.","_",x[health_center_code].upper())
+            ),
+            axis=1,
+        )
+        .tolist()
+    )
+    # messages = (
+    #     df[[health_center_code, health_center_col_name_localized]]
+    #     .apply(
+    #         lambda x: (
+    #             {
+    #                 "code": f"TENANT_TENANTS_{x[health_center_code].upper().replace(".","_")}",
+    #                 "message": x[health_center_col_name_localized],
+    #                 "module": "rainmaker-common",
+    #                 "locale": "ka_IN",
+    #             }
+    #             # re.sub("\.","_",x[health_center_code].upper())
+    #         ),
+    #         axis=1,
+    #     )
+    #     .tolist()
+    # )
+    print(messages[0])
+    with open("messages.json", "w") as f:
+        json.dump(messages, f, indent=2)
+    upsert_localization("pg", module, messages)

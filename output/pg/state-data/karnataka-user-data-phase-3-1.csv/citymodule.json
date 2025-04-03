@@ -1,0 +1,131 @@
+{
+  "tenantId": "pg",
+  "moduleName": "tenant",
+  "citymodule": [
+    {
+      "module": "HRMS",
+      "code": "HRMS",
+      "active": true,
+      "order": 2,
+      "tenants": [
+        {
+          "code": "pg.kinner"
+        },
+        {
+          "code": "pg.binaga"
+        },
+        {
+          "code": "pg.shirwad"
+        },
+        {
+          "code": "pg.heble"
+        },
+        {
+          "code": "pg.banavasib"
+        },
+        {
+          "code": "pg.unchalli"
+        },
+        {
+          "code": "pg.ulavi"
+        },
+        {
+          "code": "pg.gunda"
+        },
+        {
+          "code": "pg.kumbarawada"
+        },
+        {
+          "code": "pg.jagalpet"
+        },
+        {
+          "code": "pg.diggi"
+        },
+        {
+          "code": "pg.castlerock"
+        },
+        {
+          "code": "pg.ramanagar"
+        },
+        {
+          "code": "pg.katur"
+        },
+        {
+          "code": "pg.malagi"
+        },
+        {
+          "code": "pg.hunagunda"
+        },
+        {
+          "code": "pg.chawatti"
+        },
+        {
+          "code": "pg.vajralli"
+        }
+      ]
+    },
+    {
+      "module": "IM",
+      "code": "IM",
+      "bannerImage": "https://egov-uat-assets.s3.amazonaws.com/PGR.png",
+      "active": true,
+      "order": 2,
+      "tenants": [
+        {
+          "code": "pg.kinner"
+        },
+        {
+          "code": "pg.binaga"
+        },
+        {
+          "code": "pg.shirwad"
+        },
+        {
+          "code": "pg.heble"
+        },
+        {
+          "code": "pg.banavasib"
+        },
+        {
+          "code": "pg.unchalli"
+        },
+        {
+          "code": "pg.ulavi"
+        },
+        {
+          "code": "pg.gunda"
+        },
+        {
+          "code": "pg.kumbarawada"
+        },
+        {
+          "code": "pg.jagalpet"
+        },
+        {
+          "code": "pg.diggi"
+        },
+        {
+          "code": "pg.castlerock"
+        },
+        {
+          "code": "pg.ramanagar"
+        },
+        {
+          "code": "pg.katur"
+        },
+        {
+          "code": "pg.malagi"
+        },
+        {
+          "code": "pg.hunagunda"
+        },
+        {
+          "code": "pg.chawatti"
+        },
+        {
+          "code": "pg.vajralli"
+        }
+      ]
+    }
+  ]
+}
