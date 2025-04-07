@@ -1,170 +1,182 @@
 import os
-import sys
+import shutil
 import pandas as pd
 import chardet
 import json
 import re
 import requests
+import argparse
 
-if len(sys.argv) < 3:
-    print("Usage python tenant-generator.py <tenant-id> <state-data-file-path>")
-    sys.exit(1)
+parser = argparse.ArgumentParser(description="Generate tenant-specific data.")
+parser.add_argument("--tenant-id", required=True, help="ID of the tenant (e.g., 'mz')")
+parser.add_argument(
+    "--language-code",
+    action="append",
+    required=True,
+    help="Repeatable language code flag (e.g., --language-code en_IN --language-code kn_IN)",
+)
+parser.add_argument("file", help="Path to the input file")
+args = parser.parse_args()
 
-tenant_id = sys.argv[1]
-print(f"processing for tenant id: {tenant_id}")
+print(f"Tenant ID: {args.tenant_id}")
+print(f"Languages: {args.language_code}")
+print(f"Input File: {args.file}")
 
-with open(sys.argv[2], "rb") as f:
+tenant_id = args.tenant_id
+language_codes = args.language_code
+health_centre_file_name = args.file
+
+
+# Columns
+sl_no_col = "Sl. No"
+health_centre_name_col = "Health Centre Name"
+health_centre_type_col = "Health Centre Type"
+district_col = "District"
+block_col = "Block"
+hfr_id_col = "HFR ID"
+nin_id_col = "NIN ID"
+password_col = "Password"
+poc_name_col = "POC Name"
+designation_col = "Designation"
+contact_col = "Contact"
+latitude_col = "Latitude"
+longitude_col = "Longitude"
+vendor_username_col = "VENDOR.Username"
+
+# additional
+health_center_code_col = "Health Centre Code"
+district_code_col = "District Code"
+block_code_col = "Block Code"
+username_col = "Username"
+
+# read csv
+with open(health_centre_file_name, "rb") as f:
     result = chardet.detect(f.read(100000))
     print(result)
 
-
-# columns
-health_center_col_name_old = "Health Centre Name"
-health_center_col_name_localized = "ಆರೋಗ್ಯ ಕೇಂದ್ರದ ಹೆಸರು"
-type_of_hc_col_name_old = "Type of HC"
-district_col_name_old = "District"
-block_col_name_old = "Block"
-# contact_col_name_old = "HC PoC Contact number"
-contact_col_name_old = "Contact"
-# username_col_name_old = "HFR ID / NIN (username)"
-username_col_name_old = "NIN"
-# poc_name_col_name_old = "HC PoC Name"
-poc_name_col_name_old = "POC Name"
-vendor_name_col_name_old = "Vendor name"
-
-# renamed
-health_center_col_name = "health_center_name"
-type_of_hc_col_name = "type_of_hc"
-district_col_name = "district"
-block_col_name = "block"
-contact_col_name = "contact"
-username_col_name = "username"
-poc_name_col_name = "poc_name"
-vendor_name_col_name = "vendor_name"
-
-# additional
-health_center_code = "health_center_code"
-district_code = "district_code"
-block_code = "block_code"
-
-# read csv
 df = pd.read_csv(
-    sys.argv[2],
-    # usecols=[
-    #     health_center_col_name_old,
-    #     type_of_hc_col_name_old,
-    #     district_col_name_old,
-    #     block_col_name_old,
-    #     contact_col_name_old,
-    # ],
+    health_centre_file_name,
+    usecols=[
+        sl_no_col,
+        health_centre_name_col,
+        health_centre_type_col,
+        district_col,
+        block_col,
+        hfr_id_col,
+        nin_id_col,
+        password_col,
+        poc_name_col,
+        designation_col,
+        contact_col,
+        latitude_col,
+        longitude_col,
+        vendor_username_col,
+    ],
+    dtype=str,
+    keep_default_na=False,
     encoding=result["encoding"],
 )
+
+# clean up cell data
 df.columns = df.columns.str.strip()
+df = df.apply(lambda col: col.map(lambda x: x.strip() if isinstance(x, str) else x))
 
-df = df.filter(
-    [
-        health_center_col_name_old,
-        type_of_hc_col_name_old,
-        district_col_name_old,
-        block_col_name_old,
-        contact_col_name_old,
-        username_col_name_old,
-        poc_name_col_name_old,
-        vendor_name_col_name_old,
-        health_center_col_name_localized,
-    ]
+df[username_col] = df[hfr_id_col].where(
+    df[hfr_id_col].str.strip() != "", df[nin_id_col]
 )
 
-df = df.rename(
-    columns={
-        health_center_col_name_old: health_center_col_name,
-        type_of_hc_col_name_old: type_of_hc_col_name,
-        district_col_name_old: district_col_name,
-        block_col_name_old: block_col_name,
-        contact_col_name_old: contact_col_name,
-        username_col_name_old: username_col_name,
-        poc_name_col_name_old: poc_name_col_name,
-        vendor_name_col_name_old: vendor_name_col_name,
-    }
+
+# Validation
+def validate_columns(df, allowed_pattern, columns):
+    df_to_check = df[columns]
+    has_invalid_data = False
+    for col in df_to_check.columns:
+        mask = ~df_to_check[col].str.fullmatch(allowed_pattern)
+        bad_values = df.loc[mask, [sl_no_col, col]]
+
+        if not bad_values.empty:
+            print(f"\nInvalid values in column: {col}")
+            print(bad_values.to_string(index=False))
+            has_invalid_data = True
+    return has_invalid_data
+
+
+## Validate data present
+has_invalid_data = False
+has_invalid_data = validate_columns(
+    df,
+    r"^[a-zA-Z\s]+$",
+    [district_col, block_col],
+)
+has_invalid_data = validate_columns(
+    df,
+    r"^[a-zA-Z\s\-.]+$",
+    [health_centre_name_col, health_centre_type_col],
 )
 
-df[health_center_col_name] = df[health_center_col_name].str.strip()
-df[type_of_hc_col_name] = df[type_of_hc_col_name].str.strip().str.upper()
-df[district_col_name] = df[district_col_name].str.strip()
-df[block_col_name] = df[block_col_name].str.strip()
-df[contact_col_name] = df[contact_col_name].astype(str).str.strip()
-df[username_col_name] = df[username_col_name].astype(str).str.strip()
-df[poc_name_col_name] = df[poc_name_col_name].astype(str).str.strip()
-# df[vendor_name_col_name] = df[vendor_name_col_name].astype(str).str.strip()
+has_invalid_data = validate_columns(
+    df,
+    r"^[a-zA-Z0-9\-.]+$",
+    [username_col],
+)
+if has_invalid_data:
+    raise ValueError("Invalid Data found")
 
-
-df[health_center_code] = (
-    df[health_center_col_name]
+df[health_centre_type_col] = df[health_centre_type_col].str.upper()
+df[health_center_code_col] = (
+    df[health_centre_name_col]
     .str.lower()
     .str.replace(r"\s+", "", regex=True)
-    .str.replace("\u00fc", "u")
     .str.replace(r"[\/\-\.]", "", regex=True)
     .apply(lambda x: f"{tenant_id}.{x}")
 )
 
+# Uniqueness validation
+has_invalid_data = False
+df_to_check_uniqueness = df[
+    [
+        health_center_code_col,
+        username_col,
+        # contact_col
+    ]
+]
 
-# print(df[vendor_name_col_name].unique().tolist())
+for col in df_to_check_uniqueness.columns:
+    duplicates = df[df.duplicated(subset=[col], keep=False)]
+    if not duplicates.empty:
+        dup_values = duplicates[[sl_no_col, col]].sort_values(by=col)
+
+        print(f"\nDuplicate values in column: {col}")
+        print(dup_values.to_string(index=False))
+        has_invalid_data = True
+if has_invalid_data:
+    raise ValueError("Invalid Data found")
 
 
-# vendor_tenant_map = (
-#     df.groupby(vendor_name_col_name)[health_center_code]
-#     .agg(list)
-#     .to_json("vendor-tenants-map.json", indent=2)
-# )
-
-
-# with open("vendor-tenants-map.json", "w") as f:
-#     json.dump(vendor_tenant_map, f, indent=2)
-
-
-# sys.exit()
-
-
-df[district_code] = (
-    df[district_col_name].str.upper().str.replace(r"\s+", "", regex=True)
-)
-df[block_code] = df[[district_col_name, block_col_name]].apply(
-    lambda x: re.sub(
-        "/",
-        "",
-        f"{re.sub(r"\s+", "", x[district_col_name].lower())}.{re.sub(r"\s+", "", x[block_col_name].lower())}",
-    ),
+df[district_code_col] = df[district_col].str.upper().str.replace(r"\s+", "", regex=True)
+df[block_code_col] = df[[district_col, block_col]].apply(
+    lambda x: f"{re.sub(r"\s+", "", x[district_col].lower())}.{re.sub(r"\s+", "", x[block_col].lower())}",
     axis=1,
 )
 
-# Validate unique values in a single column
-if df[health_center_col_name].duplicated().any():
-    raise ValueError("Duplicate values found in Health Center Name column!")
-
-# if not df[type_of_hc_col_name].isin({"HWC", "SC", "PHC"}).all():
-#     raise ValueError("Invalid HC Type")
-
-if df[username_col_name].isna().any():
-    raise ValueError("username is mandatory")
-
 state_df = pd.DataFrame(
     {
-        health_center_col_name: ["State"],
-        type_of_hc_col_name: ["CITY"],
-        district_col_name: [None],
-        block_col_name: [None],
-        contact_col_name: [None],
-        health_center_code: [tenant_id],
-        district_code: [None],
-        block_code: [None],
-        username_col_name: [None],
-        poc_name_col_name: [None],
+        health_centre_name_col: ["State"],
+        health_centre_type_col: ["CITY"],
+        district_col: [None],
+        block_col: [None],
+        contact_col: [None],
+        health_center_code_col: [tenant_id],
+        district_code_col: [None],
+        block_code_col: [None],
+        username_col: [None],
+        poc_name_col: [None],
     }
 )
 
 full_df = pd.concat([state_df, df], ignore_index=True)
 
-block_code_filtered_df = df[~df[block_code].str.match(r"^[a-zA-Z.]+$")]
+block_code_filtered_df = df[~df[block_code_col].str.match(r"^[a-zA-Z.]+$")]
 
 # comment below if you have to manually fix post generation
 if len(block_code_filtered_df) > 0:
@@ -176,25 +188,25 @@ tenant_module_mdms = {
     "moduleName": "tenant",
     "tenants": full_df.apply(
         lambda x: {
-            "code": x[health_center_code],
-            "name": x[health_center_col_name],
-            "description": x[health_center_col_name],
-            "centreType": x[type_of_hc_col_name],
+            "code": x[health_center_code_col],
+            "name": x[health_centre_name_col],
+            "description": x[health_centre_name_col],
+            "centreType": x[health_centre_type_col],
             "pincode": None,
             "domainUrl": "https://e4h-dev.selcofoundation.org",
-            "type": x[type_of_hc_col_name],
+            "type": x[health_centre_type_col],
             "logoId": None,
             "imageId": None,
             "twitterUrl": None,
             "facebookUrl": None,
             "OfficeTimings": {"Mon - Fri": "9.00 AM - 6.00 PM"},
             "city": {
-                "name": x[health_center_col_name],
+                "name": x[health_centre_name_col],
                 "localName": None,
-                "districtCode": x[district_code],
-                "districtName": x[district_col_name],
-                "blockCode": x[block_code],
-                "districtTenantCode": x[health_center_code],
+                "districtCode": x[district_code_col],
+                "districtName": x[district_col],
+                "blockCode": x[block_code_col],
+                "districtTenantCode": x[health_center_code_col],
                 "regionName": None,
                 "ulbGrade": None,
                 "longitude": None,
@@ -202,25 +214,32 @@ tenant_module_mdms = {
                 "shapeFileLocation": None,
                 "captcha": None,
                 "code": (
-                    f"{tenant_id.upper()}-{x[username_col_name]}"
-                    if x[username_col_name] is not None
+                    f"{tenant_id.upper()}-{x[username_col]}"
+                    if x[username_col] is not None
                     else "0"
                 ),
                 "ddrName": None,
             },
             "address": "Nagaland",
-            "contactNumber": x[contact_col_name],
+            "contactNumber": x[contact_col],
         },
         axis=1,
     ).tolist(),
 }
 
+if os.path.exists(f"output/{tenant_id}"):
+    shutil.rmtree(f"output/{tenant_id}")
 
-tenantsFileName = f"output/{tenant_id}/{sys.argv[2]}/tenants.json"
-os.makedirs(os.path.dirname(tenantsFileName), exist_ok=True)
+vendor_tenants_map_file = f"output/{tenant_id}/vendor-tenants-map.json"
+os.makedirs(os.path.dirname(vendor_tenants_map_file), exist_ok=True)
+df.groupby(vendor_username_col)[health_center_code_col].agg(list).to_json(
+    vendor_tenants_map_file, indent=2
+)
 
+tenants_file_name = f"output/{tenant_id}/tenants.json"
+os.makedirs(os.path.dirname(tenants_file_name), exist_ok=True)
 
-with open(tenantsFileName, "w") as f:
+with open(tenants_file_name, "w") as f:
     json.dump(tenant_module_mdms, f, indent=2)
 
 
@@ -239,11 +258,11 @@ df["Employees__assignments__isHOD"] = "false"
 
 users_df = df.rename(
     columns={
-        health_center_code: "Employees__tenantId",
-        username_col_name: "Employees__code",
-        poc_name_col_name: "Employees__user__name",
-        contact_col_name: "Employees__user__mobileNumber",
-        health_center_col_name: "Employees__user__fatherOrHusbandName",
+        health_center_code_col: "Employees__tenantId",
+        username_col: "Employees__code",
+        poc_name_col: "Employees__user__name",
+        contact_col: "Employees__user__mobileNumber",
+        health_centre_name_col: "Employees__user__fatherOrHusbandName",
     }
 )
 
@@ -270,11 +289,11 @@ cols_to_keep = [
 users_df = users_df[cols_to_keep]
 
 
-usersFileName = f"output/{tenant_id}/{sys.argv[2]}/users.xlsx"
+usersFileName = f"output/{tenant_id}/users.xlsx"
 os.makedirs(os.path.dirname(usersFileName), exist_ok=True)
 users_df.to_excel(usersFileName, sheet_name="jsonxsl", index=False)
 
-districts = df[district_col_name].unique()
+districts = df[district_col].unique()
 
 district_mdms = {
     "tenantId": tenant_id,
@@ -284,28 +303,28 @@ district_mdms = {
     ),
 }
 
-districtsFileName = f"output/{tenant_id}/{sys.argv[2]}/District.json"
+districtsFileName = f"output/{tenant_id}/District.json"
 os.makedirs(os.path.dirname(districtsFileName), exist_ok=True)
 
 with open(districtsFileName, "w") as f:
     json.dump(district_mdms, f, indent=2)
 
 
-assert block_code in df.columns
-assert block_col_name in df.columns
-assert district_code in df.columns
+assert block_code_col in df.columns
+assert block_col in df.columns
+assert district_code_col in df.columns
 
 
-filtered_df = df.drop_duplicates(subset=[block_code], keep="first")
+filtered_df = df.drop_duplicates(subset=[block_code_col], keep="first")
 
 blocks = (
-    filtered_df[[block_code, block_col_name, district_code]]
+    filtered_df[[block_code_col, block_col, district_code_col]]
     .apply(
         lambda x: (
             {
-                "code": x[block_code],
-                "name": x[block_col_name],
-                "districtCode": x[district_code],
+                "code": x[block_code_col],
+                "name": x[block_col],
+                "districtCode": x[district_code_col],
                 "active": True,
             }
         ),
@@ -321,7 +340,7 @@ block_mdms = {
     "Block": blocks,
 }
 
-blockFileName = f"output/{tenant_id}/{sys.argv[2]}/Block.json"
+blockFileName = f"output/{tenant_id}/Block.json"
 os.makedirs(os.path.dirname(blockFileName), exist_ok=True)
 
 with open(blockFileName, "w") as f:
@@ -405,12 +424,12 @@ modules = [
 
 for module in modules:
     messages = (
-        df[[health_center_code, health_center_col_name]]
+        df[[health_center_code_col, health_centre_name_col]]
         .apply(
             lambda x: (
                 {
-                    "code": f"TENANT_TENANTS_{x[health_center_code].upper().replace(".","_")}",
-                    "message": x[health_center_col_name],
+                    "code": f"TENANT_TENANTS_{x[health_center_code_col].upper().replace(".","_")}",
+                    "message": x[health_centre_name_col],
                     "module": "rainmaker-common",
                     "locale": "en_IN",
                 }
@@ -437,6 +456,8 @@ for module in modules:
     #     .tolist()
     # )
     print(messages[0])
-    with open("messages.json", "w") as f:
+    message_file_name = f"output/{tenant_id}/messages.json"
+    os.makedirs(os.path.dirname(message_file_name), exist_ok=True)
+    with open(message_file_name, "w") as f:
         json.dump(messages, f, indent=2)
-    upsert_localization("pg", module, messages)
+    # upsert_localization("pg", module, messages)
