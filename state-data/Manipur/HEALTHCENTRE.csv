@@ -1,0 +1,241 @@
+Sl. No,District,Block,Health Centre Name,Health Centre Type,Password,HFR ID,NIN ID,POC Name,Designation,Contact,Latitude,Longitude,VENDOR.Username
+1,Bishnupur,Bishnupur,Ithai,HWC,Health@2026,,8886332520,Sarangthem Sanatombi,CHO,7005579478,,,DKK3Sons
+2,Bishnupur,Bishnupur,Leimapokpam,PHC,Health@2026,,2587815487,Asem Sanatomba Singh,MTS,7421920240,24.701581,93.86165,DKK3Sons
+3,Bishnupur,Bishnupur,Moirang,CHC,Health@2026,,1112285810,Dr. Sarojini Angam,MO IC,7630888494,,,DKK3Sons
+4,Bishnupur,Bishnupur,Nambol,CHC,Health@2026,,7877431622,Longjam Michael Singh,MTS,9862717375,,,DKK3Sons
+5,Bishnupur,Bishnupur,Ningthoukhong,PHC,Health@2026,,5471571116,Chandramani Singh,MHS,8414807804,,,DKK3Sons
+6,Chandel,Chandel,Anal Khullen,SC,Health@2026,,6636867571,Jangvei Shiltung,CHO,8787601093,,,DKK3Sons
+7,Chandel,Chakpikarong,Chakpikarong,CHC,Health@2026,,1875884528,Dr.Rengneiwar,MO,7005020940,,,DKK3Sons
+8,Chandel,Chandel,Chandel DH,DH,Health@2026,,8128431841,Dr.Joyson Monsang,MS,9862465221,,,DKK3Sons
+9,Chandel,Khengjoy,Khengjoi,PHC,Health@2026,,8324456642,RL.Sangeeta,CHO,9402256838,,,DKK3Sons
+10,Chandel,Chakpikarong,Khubung Khullen,SC,Health@2026,,4171133152,Hringni,CHO,7085456874,,,DKK3Sons
+11,Chandel,Chandel,Khudei Khunou,HWC,Health@2026,,4833636428,Khuding Helena,CHO,9366391047,,,DKK3Sons
+12,Chandel,Chandel,Komlathabi,PHC,Health@2026,,3432678815,Cinchonhing Khongsai,ANM,8414829136,,,DKK3Sons
+13,Chandel,Chandel,Larong,HWC,Health@2026,,2568688325,Christina. Sn,CHO,9366336842,,,DKK3Sons
+14,Chandel,Chandel,Leingangching,HWC,Health@2026,,1482385380,Toshangmoi Nahrang,CHO,7085787682,,,DKK3Sons
+15,Chandel,Chandel,Paraolon,HWC,Health@2026,,1366854485,Elizabeth Dilbung,CHO,8974320301,,,DKK3Sons
+16,Chandel,Chandel,Purum Tampak,HWC,Health@2026,,3224834642,Maryboi,CHO,9366398523,,,DKK3Sons
+17,Chandel,Khengjoy,Saibol Joupi,SC,Health@2026,,3176477762,Babie Huten,CHO,9612455696,,,DKK3Sons
+18,Chandel,Chakpikarong,Sajik Tampak,PHC,Health@2026,,6446677327,Dr.Rahman,MO,7085381338,,,DKK3Sons
+19,Chandel,Khengjoy,Sehlon,SC,Health@2026,,4626375788,Angela kuki,Asha,9402906003,,,DKK3Sons
+20,Chandel,Khengjoy,Songiang,SC,Health@2026,,4537573836,Tomui,ANM,8974603936,,,DKK3Sons
+21,Chandel,Chandel,Tarao Laimanal,HWC,Health@2026,,6844785219,Tungdar Maring,CHO,8974992844,,,DKK3Sons
+22,Chandel,Chandel,Unopat,HWC,Health@2026,,4764735363,Echan,CHO,7005694127,,,DKK3Sons
+23,Chandel,Khengjoy,Jangoulen,SC,Health@2026,,1112781230,Somkhupao,Helper,9612944472,,,DKK3Sons
+24,Churachandpur,Thanlon,Aibulon,SC,Health@2026,,5778375815,Nuniang,ASHA,9612059150,24.1166147,93.2384787,DKK3Sons
+25,Churachandpur,Singngat,Behiang,PHC,Health@2026,,3828454235,Josiah Mate,MO IC,9366001302,23.9797912,93.5498356,DKK3Sons
+26,Churachandpur,Henglep,Bunglon,SC,Health@2026,,5511724618,Boinu Nemhathoi,ANM,6009328276,24.500857,93.726088,DKK3Sons
+27,Churachandpur,Thanlon,Bungpilon,SC,Health@2026,,3881286185,Nianglian,ASHA,9366748535,24.090174,93.187684,DKK3Sons
+28,Churachandpur,Henglep,Charoikhullen,SC,Health@2026,,8663726829,L Sunita Devi,CHO,8787635345,24.6077126,93.7205481,DKK3Sons
+29,Churachandpur,Churachandpur,Churachandpur DH,DH,Health@2026,,7848142563,Seanbawi,Dy MS,8731830419,24.343168,93.692953,DKK3Sons
+30,Churachandpur,Samulamlan,Geljang,SC,Health@2026,,7876254272,Chingngaihniang,ANM,9089126902,,,DKK3Sons
+31,Churachandpur,Henglep,Henglep,PHC,Health@2026,,3748143660,Thangboi,MO IC,7005821197,,,DKK3Sons
+32,Churachandpur,Singngat,Hiangmual,SC,Health@2026,,4636744718,Hauching,ASHA,8732872073,,,DKK3Sons
+33,Churachandpur,Singngat,Hiangtam K,SC,Health@2026,,8671741745,Robert,Chief,7005271852,,,DKK3Sons
+34,Churachandpur,Thanlon,Kaihlam,SC,Health@2026,,7858463164,Khawlkhanching,ASHA,8119080589,,,DKK3Sons
+35,Churachandpur,Samulamlan,Khoirentak,SC,Health@2026,,4442472181,Anita,CHO,8257994078,,,DKK3Sons
+36,Churachandpur,Samulamlan,Khonomphai,SC,Health@2026,,3634728756,Johny,Chief,8787541265,,,DKK3Sons
+37,Churachandpur,Samulamlan,Komkeirap,SC,Health@2026,,8781465540,Rebati,ANM,6009282768,,,DKK3Sons
+38,Churachandpur,Samulamlan,Kumbipukhri,SC,Health@2026,,4721444349,Dam Johny,ANM,9862339974,,,DKK3Sons
+39,Churachandpur,Samulamlan,L Alpha,SC,Health@2026,,6376278724,Rody Vanlalsung,CHO,8974468063,,,DKK3Sons
+40,Churachandpur,Henglep,L Khengjang,SC,Health@2026,,1824276487,Kimneo,ANM,7085412221,,,DKK3Sons
+41,Churachandpur,Samulamlan,Lamzang,SC,Health@2026,,6748545578,L Ganga Rani Devi,CHO,6009400963,,,DKK3Sons
+42,Churachandpur,Samulamlan,Leisang,SC,Health@2026,,8416817438,R Malsawmtluangi,CHO,8730978703,,,DKK3Sons
+43,Churachandpur,Singngat,Lungthul E,SC,Health@2026,,5871644281,Khamdoulian,Villager,9612495527,,,DKK3Sons
+44,Churachandpur,Samulamlan,Mata,SC,Health@2026,,3724848126,Ruthi Lalbiekrem,CHO,8794222905,,,DKK3Sons
+45,Churachandpur,Samulamlan,Mission Compound,SC,Health@2026,,8137682764,Hatthennei,CHO,8414877005,,,DKK3Sons
+46,Churachandpur,Samulamlan,New Lamka,SC,Health@2026,,2411663129,Sandy Manbiakhoih,CHO,9862848736,,,DKK3Sons
+47,Churachandpur,Henglep,Ngarian,SC,Health@2026,,6676484220,Sinthuiliu,CHO,7628894274,,,DKK3Sons
+48,Churachandpur,Samulamlan,Pearsonmun,HWC,Health@2026,,4358546671,JC Khuptong,Supervisor,9612925525,,,DKK3Sons
+49,Churachandpur,Samulamlan,Sagang,PHC,Health@2026,,1153724123,Baby,MO IC,6009536611,,,DKK3Sons
+50,Churachandpur,Samulamlan,Saikot,PHC,Health@2026,,7718886125,James K Touthang,MO IC,9612666987,,,DKK3Sons
+51,Churachandpur,Samulamlan,Saipum,SC,Health@2026,,7211662254,Sl Hoikhohat,HWC,8731858628,,,DKK3Sons
+52,Churachandpur,Samulamlan,Senpangjar,SC,Health@2026,,4326178862,Kerody,ANM,7085325189,,,DKK3Sons
+53,Churachandpur,Samulamlan,Siden,SC,Health@2026,,1378762775,Neikhotin,ANM,9612538101,,,DKK3Sons
+54,Churachandpur,Singngat,Singngat,CHC,Health@2026,,1742483827,Steve,MO IC,9402465838,,,DKK3Sons
+55,Churachandpur,Thanlon,Sinzawl,PHC,Health@2026,,2456347687,Chongrolen,Doctor,7005767873,,,DKK3Sons
+56,Churachandpur,Thanlon,Songtal,SC,Health@2026,,3481622888,Nemngaihching,ANM,9615034773,,,DKK3Sons
+57,Churachandpur,Singngat,Suangdoh,SC,Health@2026,,6435867186,Nianghoihchin,ANM,9077184025,,,DKK3Sons
+58,Churachandpur,Singngat,Sumchinvum,SC,Health@2026,,1284643838,Uniang,ASHA,8730974685,,,DKK3Sons
+59,Churachandpur,Samulamlan,Thingkangphai,SC,Health@2026,,8815613883,Jamneihmawi,ANM,8731088002,,,DKK3Sons
+60,Churachandpur,Samulamlan,Tuaitengphai,SC,Health@2026,,8161141521,Khumi,CHO,8800254272,,,DKK3Sons
+61,Churachandpur,Henglep,Tuilaphai,SC,Health@2026,,4785453665,Nengneilam,CHO,8132090511,,,DKK3Sons
+62,Churachandpur,Henglep,Ukha Loikhai,SC,Health@2026,,7744258711,Ngailalnei,ANM,8730988626,,,DKK3Sons
+63,Churachandpur,Singngat,Zezaw,PHC,Health@2026,,8736733141,Hanna,MO IC,9862756495,,,DKK3Sons
+64,Imphal East,Imphal East,Akampat,PHC,Health@2026,,3675857431,Dr Tarakio,MO,9089941810,,,DKK3Sons
+65,Imphal East,Keiraobitra,Angtha,HWC,Health@2026,,6334674543,Samukcham Robinala,CHO,7005112448,,,DKK3Sons
+66,Imphal East,Imphal West,Bashikhong,PHC,Health@2026,,6481345749,Ibochou,Doctor,8414992242,,,DKK3Sons
+67,Imphal East,Keiraobitra,Chanam Sandrok,HWC,Health@2026,,7853477615,Subasini Devi Waikhom,CHO,8974236069,,,DKK3Sons
+68,Imphal East,Sawombung,Chingkhu Sambei,HWC,Health@2026,,5684346181,Ningombam Kabita Chanu,CHO,9862070754,,,DKK3Sons
+69,Imphal East,Keiraobitra,Huikap,HWC,Health@2026,,8854583559,W Ranjana Devi,CHO,8787865576,,,DKK3Sons
+70,Imphal East,Keiraobitra,Irilbung,HWC,Health@2026,,5221271546,Khundrakpam Reena Devi,CHO,7005565692,,,DKK3Sons
+71,Imphal East,Porompat,Kairang Muslim,HWC,Health@2026,,6248177583,Thangjam Nalini Chanu,CHO,9402614029,,,DKK3Sons
+72,Imphal East,Imphal East,Keirao Makting,PHC,Health@2026,,5288374142,Dr. Sumani Devi,MO,7005246141,,,DKK3Sons
+73,Imphal East,Kairabitra,Keirao Wangkhem,HWC,Health@2026,,4334276468,Umabati Athokpam,CHO,9862253120,,,DKK3Sons
+74,Imphal East,Sawombung,Khabeisoi,HWC,Health@2026,,7447562856,Bindiya Devi,CHO,6909504259,,,DKK3Sons
+75,Imphal East,Sawombung,Khurai Heikrumakhong,HWC,Health@2026,,5411311375,Konjengbam Romi Devi,CHO,9366331711,,,DKK3Sons
+76,Imphal East,Sawombung,Khurai Heinoumakhong,HWC,Health@2026,,3618342871,RK Devala Devi,CHO,9862071469,,,DKK3Sons
+77,Imphal East,Keiraobitra,Kiyamgei Khagi Bazar,HWC,Health@2026,,6767881714,Waikhom Bidyalakhsmi Devi,CHO,8731043774,,,DKK3Sons
+78,Imphal East,Keirao Bitra,Kongba,HWC,Health@2026,,3772567685,Jaya Devi Ashem,CHO,7308270488,,,DKK3Sons
+79,Imphal East,Khongsai Veng,Laipham Khunou,HWC,Health@2026,,6284635478,Ng.Ajeeta,CHO,8259058291,,,DKK3Sons
+80,Imphal East,Imphal East,Mantripikhri,UPHC,Health@2026,,8351448272,Dr. Jenny,MO,8416050884,,,DKK3Sons
+81,Imphal East,Imphal East,Moirangkampu,HWC,Health@2026,,3156181160,Wangkhei mayum Sophia,CHO,9089273836,,,DKK3Sons
+82,Imphal East,Kairaobitra,Naharup Makhapat,HWC,Health@2026,,5353575110,Wangkeirakpam Dyna,CHO,8794076286,,,DKK3Sons
+83,Imphal East,Keirao Bitra,Ningomthongjao,HWC,Health@2026,,3166842785,Naobicha Yurembam,CHO,8787765953,,,DKK3Sons
+84,Imphal East,Imphal East,Nongpok Keithelmanbi,PHC,Health@2026,,6834665827,Jotin,MO,7005759766,,,DKK3Sons
+85,Imphal East,Sawombung,Oksu,HWC,Health@2026,,3844727259,Akoijam Bidyashwori devi,CHO,9366491707,,,DKK3Sons
+86,Imphal East,Imphal East,Sagolmang,CHC,Health@2026,,3612555171,Rajesh Singh,MTS,6009610255,,,DKK3Sons
+87,Imphal East,Sawombung,Sanjenbam,HWC,Health@2026,,7224444369,Daneshwori,CHO,8732041490,,,DKK3Sons
+88,Imphal East,Sawombung,Seijang,HWC,Health@2026,,3847352584,Shilla,CHO,9856128418,,,DKK3Sons
+89,Imphal East,Sawombung,Sekta,HWC,Health@2026,,7648216773,Rita Devi,CHO,7085513394,,,DKK3Sons
+90,Imphal East,Lamlei kendra,Takhel,HWC,Health@2026,,8572628439,Mona,CHO,7005583487,,,DKK3Sons
+91,Imphal East,Sawombung,Tellou Chana,HWC,Health@2026,,3338353778,Irom Aneshwori Devi,CHO,9615473270,,,DKK3Sons
+92,Imphal East,Kairaobitra,Thambalkong,HWC,Health@2026,,6687525847,Ngangom Leihao Devi,CHO,7005335172,,,DKK3Sons
+93,Imphal East,Keirao Bitra,Top Chingtha,HWC,Health@2026,,7121514629,Khangebam Beda Devi,CHO,9383351696,,,DKK3Sons
+94,Imphal East,Keirao Bitra,Uchekon,HWC,Health@2026,,4161325131,Naobicha Yurembam,CHO,8787765953,,,DKK3Sons
+95,Imphal East,Keiraobitra,Uchekon Laikon,HWC,Health@2026,,6424837356,Tourangbam Babita,CHO,7005910544,,,DKK3Sons
+96,Imphal East,Keirao Bitra,Urup,HWC,Health@2026,,2247875285,Toijam Raju Devi,CHO,8131916586,,,DKK3Sons
+97,Imphal East,Kairao,Waithou Chirou,HWC,Health@2026,,7242578644,Bedarani CHO,CHO,9366317009,,,DKK3Sons
+98,Imphal East,Sawombung,Waiton,HWC,Health@2026,,2136117260,K. Premita Devi,CHO,8119006880,,,DKK3Sons
+99,Imphal East,Sawombung,Yumnam Khunou,HWC,Health@2026,,2737873717,N.Shyamapati devi,CHO,8730958438,,,DKK3Sons
+100,Imphal East,Imphal West,Konok Khongnangkhong,UPHC,Health@2026,,IN1410000454,Dr. Bonita,MO,8732893261,,,DKK3Sons
+101,Imphal West,Imphal West,Awang Jiri,HWC,Health@2026,,8277446228,Kabita,CHO,9378198451,,,DKK3Sons
+102,Imphal West,Khumbong,Awang Khunou,HWC,Health@2026,,1114127457,Rk.Elina Devi,CHO,8837423904,,,DKK3Sons
+103,Imphal West,Imphal West,Awang Wabagai,HWC,Health@2026,,4638757411,Ranita,CHO,7005611507,,,DKK3Sons
+104,Imphal West,Imphal West,Bamdiar,HWC,Health@2026,,5351226351,Ghanashyam,Pharmacist,7005312806,,,DKK3Sons
+105,Imphal West,Wangoi,Bengoon,HWC,Health@2026,,8436767555,Y. Pratima Devi,CHO,9862722308,,,DKK3Sons
+106,Imphal West,Wangoi,Chirai,HWC,Health@2026,,3378654366,Laitonjam Minee Devi,CHO,7005013867,,,DKK3Sons
+107,Imphal West,Wangoi,Govindagram,HWC,Health@2026,,2384745572,Huidrom Rojee Devi,CHO,9366379655,,,DKK3Sons
+108,Imphal West,Haorangsabal,Haorangsabal Dispensary,HWC,Health@2026,,7622745870,Salam Shanti,ANM INCHARGE,8415999735,,,DKK3Sons
+109,Imphal West,Imphal West,Heigrujam,HWC,Health@2026,,3223321138,Susheela,CHO,8131070478,,,DKK3Sons
+110,Imphal West,Wangoi,Hiyangthang,HWC,Health@2026,,8665144773,Ranjana,CHO,7308677735,,,DKK3Sons
+111,Imphal West,Sekmai,Iroisemba,UHWC,Health@2026,,6478513861,Ninibem Saikhom,CHO,8794724684,,,DKK3Sons
+112,Imphal West,Wangoi,Irom Meijrao,HWC,Health@2026,,1745877454,Lourembam Sushmita,CHO,7085269155,,,DKK3Sons
+113,Imphal West,Imphal West,Kakwa,PHC,Health@2026,,8782574316,MD Zakhir Hussain,Ward attendant,8131906610,,,DKK3Sons
+114,Imphal West,Imphal west,Khabi Thangtek,HWC,Health@2026,,8461382460,Romila,CHO,8414889889,,,DKK3Sons
+115,Imphal West,Awangsabal,Khamnam Bazar,HWC,Health@2026,,6863158447,Maibam Kalpana,Staff,7005568313,,,DKK3Sons
+116,Imphal West,Imphal West,Khonghampat,PHC,Health@2026,,3286782721,Asharani Devi,S/N,8787791862,,,DKK3Sons
+117,Imphal West,Imphal West,Khumbong,PHC,Health@2026,,4771442581,Ngouba,Gr-4,9856797742,,,DKK3Sons
+118,Imphal West,Imphal West,Kokchai,HWC,Health@2026,,8518656841,M Chandrajayanti,ANM,9612644148,,,DKK3Sons
+119,Imphal West,Wangoi,Komlakhong,HWC,Health@2026,,8626638574,P Sharmila Devi,CHO,8131800136,,,DKK3Sons
+120,Imphal West,Imphal West,Konthoujam,HWC,Health@2026,,7134876635,O Birokumari,ANM,9615436150,,,DKK3Sons
+121,Imphal West,Wangoi,Kwakeithel Heinou Khongnembi,HWC,Health@2026,,3817816832,Thongam Nitirani Devi,CHO,9378009064,,,DKK3Sons
+122,Imphal West,Khourangthabal,Lamdeng,HWC,Health@2026,,1264864867,Leinamanbi Chanu,CHO,7005783261,,,DKK3Sons
+123,Imphal West,Imphal West,Langol Tarung,UPHC,Health@2026,,3446577813,Dr. Devina,MO,9401718625,,,DKK3Sons
+124,Imphal West,Wangoi,Laphupat Tera,HWC,Health@2026,,5554615228,Puyam Imila Devi,CHO,8413007522,,,DKK3Sons
+125,Imphal West,Khourangthabal,Maklang,HWC,Health@2026,,4424458653,Romita,CHO,8794375730,,,DKK3Sons
+126,Imphal West,Wangoi,Malom Tuliyaima,HWC,Health@2026,,6756548373,Sandham Geeta Devi,CHO,8794189118,,,DKK3Sons
+127,Imphal West,Imphal West,Mayang Imphal,PHC,Health@2026,,8424535741,Dr. Kiran Mala Maisnam,MO IC,9774718644,,,DKK3Sons
+128,Imphal West,Imphal West,Mekola,PHC,Health@2026,,3633683739,Roshan Singh,Gr-4,7005973744,,,DKK3Sons
+129,Imphal West,Wangoi,Mutum Phibou,HWC,Health@2026,,8776276266,Rekhaja Devi,CHO,8837411243,,,DKK3Sons
+130,Imphal West,Wangoi,Naorem Chaprou,HWC,Health@2026,,5727234782,L Ranjita Devi,CHO,8413867333,,,DKK3Sons
+131,Imphal West,Wangoi,Naoriya Pakhanglakpa,HWC,Health@2026,,1231785112,L Debala Devi,CHO,9774078809,,,DKK3Sons
+132,Imphal West,Wangoi,Ningombam,HWC,Health@2026,,5548546380,Longjam Purnima,CHO,8794072636,,,DKK3Sons
+133,Imphal West,Haorang Fabal,Nongchupkameng,HWC,Health@2026,,1311254336,Asharani KH,CHO,9856408415,,,DKK3Sons
+134,Imphal West,Haorangsabal,Phumlou,HWC,Health@2026,,5437823346,L. Bisheswori Devi,CHO,9612056724,,,DKK3Sons
+135,Imphal West,Patsoi,Sagolband Lamkhai,HWC,Health@2026,,5773871370,Hijam Kamala,CHO,8575863506,,,DKK3Sons
+136,Imphal West,Imphal West,Salam,PHC,Health@2026,,5838737319,Dr Trishna,MO,8732839427,,,DKK3Sons
+137,Imphal West,Khumbong,Sangaiporou,HWC,Health@2026,,5834436817,Laishram Rebina Devi,CHO,9774328665,,,DKK3Sons
+138,Imphal West,Imphal West,Sekmai,CHC,Health@2026,,5526417117,Achuina,MO,9402612053,,,DKK3Sons
+139,Imphal West,Imphal West,Singjamei,UPHC,Health@2026,,1115657429,Okram Sanjoy Singh,PC,7085555545,,,DKK3Sons
+140,Imphal West,Haorangsabal,Takyel Khongbal,HWC,Health@2026,,3511541660,Maibam Ashalata Devi,CHO,8974902628,,,DKK3Sons
+141,Imphal West,Wangoi,Waisel Mapal,HWC,Health@2026,,3376248450,Irom Dhaneshowri Devi,CHO,8131984111,,,DKK3Sons
+142,Imphal West,Imphal West,Wangoi,CHC,Health@2026,,3153317155,Thoudam,Gr-4,6909930061,,,DKK3Sons
+143,Imphal West,Wangoi,Yumnam Huidrom,HWC,Health@2026,,6376456684,Asem Anita Devi,CHO,9612864977,,,DKK3Sons
+144,Imphal West,Khumbong,Yurembam,HWC,Health@2026,,1578284646,Robita,CHO,6009280595,,,DKK3Sons
+145,Kakching,Kakching,Kakching,CHC,Health@2026,,1117716355,N Somorjit Singh,Gr-4,7085383886,,,DKK3Sons
+146,Kakching,Langmeidong,Langmeidong,PHC,Health@2026,,6741873183,Tomba Singh,MHW,8787620432,,,DKK3Sons
+147,Kakching,Waikhong,Serou,PHC,Health@2026,,8448173222,Dr Bebika,MO,8787643877,,,DKK3Sons
+148,Kakching,Waikhong,Sugnu,CHC,Health@2026,,7254438729,Ashakanda Singh,Ward Attendent,9366137424,,,DKK3Sons
+149,Kamjong,Kamjong,Grihang,HWC,Health@2026,,7511585122,Achui,FC,7629949477,,,DKK3Sons
+150,Kamjong,Kamjong,Kamjong,CHC,Health@2026,,6785748127,Dr Moskoov,MO IC,7005741391,,,DKK3Sons
+151,Kamjong,Kamjong,Kasom,PHC,Health@2026,,7472871669,Dr Moshil,MO IC,6909261625,,,DKK3Sons
+152,Kamjong,Phungyar,Lamlai,HWC,Health@2026,,7462666863,Keisha Hemabati Devi,ANM,9089263215,,,DKK3Sons
+153,Kamjong,Kamjong,Mawai,HWC,Health@2026,,7441578452,Worchuila,CHO,9612699788,,,DKK3Sons
+154,Kamjong,Kamjong,Nambisha,HWC,Health@2026,,4882355854,Phoemila Ningshen,ANM,7630905850,,,DKK3Sons
+155,Kamjong,Phungyar,Ningthi,HWC,Health@2026,,4211242161,Wonnam Jajo,ANM,7629035414,,,DKK3Sons
+156,Kamjong,Phungyar,Phungyar,PHC,Health@2026,,1556554259,Vangam,CH,8730095408,,,DKK3Sons
+157,Kamjong,Phungyar,Shingkap,HWC,Health@2026,,8372337272,Tamreiwon Jajo,CHO,8974235816,,,DKK3Sons
+158,Kamjong,Phungyar,Sorbung,HWC,Health@2026,,3313377875,L Rajen Singh,CHO,8974543300,,,DKK3Sons
+159,Kamjong,Phungyar,T Hundung,HWC,Health@2026,,7482487118,Rimai Awanao,ANM,9862802544,,,DKK3Sons
+160,Kangpokpi,Kangpokpi,Kangpokpi,CHC,Health@2026,,6737826575,Lalpu,MO,7640898381,,,DKK3Sons
+161,Kangpokpi,Kangpokpi,Saikul,CHC,Health@2026,,8454753453,John,MO IC,9863036959,,,DKK3Sons
+162,Kangpokpi,Kangpokpi,T Waichong,PHC,Health@2026,,7375486623,Hegin,MO IC,7005299386,,,DKK3Sons
+163,Noney,Noney,Dolang,HWC,Health@2026,,7454368627,Dr. Solomon,MO,9615001310,,,DKK3Sons
+164,Noney,Noney,Haochong,PHC,Health@2026,,7752824768,Sanwamba Bariam,Malaria Tech. Supervisor,9612661454,,,DKK3Sons
+165,Noney,Nungba,Khoupum,PHC,Health@2026,,7258832851,Daniel Pamei,Ward Attendant,8119833199,,,DKK3Sons
+166,Noney,Noney,Noney,PHC,Health@2026,,1287823478,KG Lungkuni/Pantichung/SP Aimpou/Angam,Chowkidar/Gr-4/Pharmacist,9862810029,,,DKK3Sons
+167,Noney,Nungba,Nungba,CHC,Health@2026,,1524521810,Ganthanpou Gangmei,Ward attendent,7085832823,,,DKK3Sons
+168,Noney,Nungba,Nungleibam,HWC,Health@2026,,6356121266,Doukunlunglu R Naga,ANM,8730919907,,,DKK3Sons
+169,Noney,Noney,Thangal,HWC,Health@2026,,2487113884,Peter Pamei,MHW,9862590552,,,DKK3Sons
+170,Pherzawl,Pherzawl,Bukpi,HWC,Health@2026,,3347758561,Nukhawl,ASHA,8131056220,,,DKK3Sons
+171,Pherzawl,Pherzwal,Parbung,CHC,Health@2026,,8625457778,Thangleinzoul,MO,8014087919,,,DKK3Sons
+172,Pherzawl,Pherzawl,Patpuihmun,PHC,Health@2026,,2262226133,John,Villagers,9612439989,,,DKK3Sons
+173,Pherzawl,Pherzawl,Sainoujang,HWC,Health@2026,,4384752426,Anthony,FC,8131891167,,,DKK3Sons
+174,Pherzawl,Pherzawl,Senvom,PHC,Health@2026,,4374176644,Naomi,MO IC,8413947903,,,DKK3Sons
+175,Pherzawl,Pherzawl,Sibapurikhal,PHC,Health@2026,,1115635730,Dr. Samuel Valte,MO IC,7018303138,,,DKK3Sons
+176,Pherzawl,Pherzwal,Thanlon,PHC,Health@2026,,7388242179,Dr. Richard Z,MO,8638679339,,,DKK3Sons
+177,Senapati,Mao,Bendramei,PHC,Health@2026,,1115657544,Dr.James,MO,9862930616,,,DKK3Sons
+178,Senapati,Mao Maram,Karong,HWC,Health@2026,,7771683757,K.Usharani,CHO,8787396123,,,DKK3Sons
+179,Senapati,Oinam Hill,Keize,HWC,Health@2026,,1115634410,Longjam Amusana,CHO,8787303332,,,DKK3Sons
+180,Senapati,Khongdei,Khongdei,PHC,Health@2026,,4851675787,Themreichan,Village Secc,8974260772,,,DKK3Sons
+181,Senapati,Purul,Koide,HWC,Health@2026,,5536615528,Chinglen,CHO,9615346710,,,DKK3Sons
+182,Senapati,Senapati,Laii,PHC,Health@2026,,5231512285,Dr. Princy,Doctor,6009280317,,,DKK3Sons
+183,Senapati,Paomata,Maiba,HWC,Health@2026,,2521224655,Ruth,CHO,9862258937,,,DKK3Sons
+184,Senapati,Mao,Mao,CHC,Health@2026,,8334267542,Robui,Lab Tech,7011100682,,,DKK3Sons
+185,Senapati,Maram,Maram,PHC,Health@2026,,4581862382,Mohriini Kaihe,Opthalmic Assistant,7005791686,,,DKK3Sons
+186,Senapati,Tadubi,Maram Khullen,HWC,Health@2026,,1311431751,Kabitila,CHO,6009344128,,,DKK3Sons
+187,Senapati,Wilong,Oklong,HWC,Health@2026,,7388717220,Darinbong,CHO,8731990358,,,DKK3Sons
+188,Senapati,Senapati,Paomata,PHC,Health@2026,,1768248633,Shangringshel Saka,Lab Tech,6909105091,,,DKK3Sons
+189,Senapati,Senapati,Phaibung,PHC,Health@2026,,1847855739,S. Mareila,ANM,8730860497,,,DKK3Sons
+190,Senapati,Maram,Pudunamai,HWC,Health@2026,,7554748355,Therou,CHO,8787577224,,,DKK3Sons
+191,Senapati,Songsong,Punanamei,HWC,Health@2026,,6777577658,Lidziisa Lokho,CHO,9612880539,,,DKK3Sons
+192,Senapati,Maram,Rajamei,HWC,Health@2026,,4313171151,Losa,BPM,7085296640,,,DKK3Sons
+193,Senapati,Maram,Ramlung,HWC,Health@2026,,3677687133,PK Rose,CHO,9383276363,,,DKK3Sons
+194,Senapati,Tadubi,Sadim,HWC,Health@2026,,2777844214,H Lotsü,ANM,8731922178,,,DKK3Sons
+195,Senapati,Senapati,Tadubi,PHC,Health@2026,,2826644466,Dr Katini,Doctor,9612306189,,,DKK3Sons
+196,Senapati,Purul,Tingba Khullen,HWC,Health@2026,,7143468275,Y Solomi,ANM,7085330807,,,DKK3Sons
+197,Senapati,Tadubi,Tobumai,HWC,Health@2026,,7827427415,Chiipfiia Charakho,CHO,9383093448,,,DKK3Sons
+198,Senapati,Poamata,Tungjoy,HWC,Health@2026,,1877468312,Akha Khasiilou,ANM,8132066432,,,DKK3Sons
+199,Tamenglong,Tousem,Aben,SC,Health@2026,,5821312526,Karnuale,ANM,9362108129,,,DKK3Sons
+200,Tamenglong,Tamenglong,Akhui,SC,Health@2026,,2757868563,Chibui newme,ANM ,8730933343,,,DKK3Sons
+201,Tamenglong,Tousem,Atengba,SC,Health@2026,,1417121181,Kaniam,ASHA,8798134041,,,DKK3Sons
+202,Tamenglong,Tamei,Chaton,SC,Health@2026,,7563818645,Baruah ,Secretary,6909959209,,,DKK3Sons
+203,Tamenglong,Tamenglong,Dailong,SC,Health@2026,,3888887472,Chui,ASHA,9436281803,,,DKK3Sons
+204,Tamenglong,Tamenglong,Tamenglong DH,DH,Health@2026,,8732138436,Dipinglung,Office staff,8794934911,,,DKK3Sons
+205,Tamenglong,Tamenglong,Inrenglong,SC,Health@2026,,7183766463,Rk.Damaris,ANM,8415937894,,,DKK3Sons
+206,Tamenglong,Tamei,Kabonram,SC,Health@2026,,1832878621,Reumaliu,ANM,8974551788,,,DKK3Sons
+207,Tamenglong,Tamei,Lenglong,SC,Health@2026,,2861717888,Alakliu,ANM,9436380975,,,DKK3Sons
+208,Tamenglong,Tousem,Namtiram,SC,Health@2026,,6563344776,Thuanthui,ASHA,9362087074,,,DKK3Sons
+209,Tamenglong,Tousem,New Kaiphundai,SC,Health@2026,,3427814284,Radhamani,ANM,8974089838,,,DKK3Sons
+210,Tamenglong,Tamenglong,Nurathel,SC,Health@2026,,6843775658,Athuiliu,ANM,9612511341,,,DKK3Sons
+211,Tamenglong,Tousem,Oniamlong,PHC,Health@2026,,4224264780,Dr Poukhamlung,Doctor,7005021934,,,DKK3Sons
+212,Tamenglong,Tamei,Tamei,PHC,Health@2026,,7656441784,Makumsi,ASHA,9089773513,,,DKK3Sons
+213,Tamenglong,Tousem,Taningjam,SC,Health@2026,,8826683164,Pousamrangtulie,ANM,9366291681,,,DKK3Sons
+214,Tamenglong,Tousem,Tousem,PHC,Health@2026,,3142132228,Chibuile,ANM,8730933343,,,DKK3Sons
+215,Tamenglong,Tamenglong,Wairangba,SC,Health@2026,,3543744332,Pamei Lungthanlieu,ASHA,8787506581,,,DKK3Sons
+216,Tengnoupal,Chandel,Aimol Tampak,HWC,Health@2026,,6324754685,Sofia ,CHO,8787358267,,,DKK3Sons
+217,Tengnoupal,Chakpikarong,Kwatha,HWC,Health@2026,,8434561687,Rani Devi,ANM,9612444284,,,DKK3Sons
+218,Tengnoupal,Machi,Machi,PHC,Health@2026,,8462447221,Angphun Charanga,Gr-4,9612443535,,,DKK3Sons
+219,Tengnoupal,Moreh,Moreh,PHC,Health@2026,,8842553763,Nurul,DOCTOR,7005277060,,,DKK3Sons
+220,Tengnoupal,Kakching,Saivom,HWC,Health@2026,,3836483226,Dr. Rakhi,CHO,7005417837,,,DKK3Sons
+221,Tengnoupal,Waikhong,Sita,HWC,Health@2026,,3833273679,Houneikim,ASHA,8787674967,,,DKK3Sons
+222,Tengnoupal,Tengnoupal,Tengnoupal,PHC,Health@2026,,5624485388,Lamthakka Kothil,Ward Attendent,9612174482,,,DKK3Sons
+223,Thoubal,Thoubal,Heirok,CHC,Health@2026,,1157255421,Shamu,Supervisor,8837296717,,,DKK3Sons
+224,Thoubal,Thoubal,Khoirom,PHC,Health@2026,,3744835533,L Nageshwor,MHS,9862045570,,,DKK3Sons
+225,Thoubal,Thoubal,Leisangthem,PHC,Health@2026,,8338616850,Dr. Abdul Khalif,MO,8787329076,,,DKK3Sons
+226,Thoubal,Thoubal,Lilong Houreibi,CHC,Health@2026,,1736111814,MD Adul Majid,Gr-4,7005618852,,,DKK3Sons
+227,Thoubal,Thoubal,Sangaiyumpham,PHC,Health@2026,,7888287880,Mumtaz Begum,FWH,9366913886,,,DKK3Sons
+228,Thoubal,Thoubal,Yairipok,CHC,Health@2026,,5161522346,Prem Kumar,WH,8131819886,,,DKK3Sons
+229,Ukhrul,Ukhrul,Awang Kasom,HWC,Health@2026,,2833454347,Shim, FC,8798755481,,,DKK3Sons
+230,Ukhrul,Ukhrul,Chingai,PHC,Health@2026,,1221241431,Dr.Woryosing,MO,7085819890,,,DKK3Sons
+231,Ukhrul,Ukhrul,Ukhrul DH,DH,Health@2026,,6676558445,MS,MS,8787809774,,,DKK3Sons
+232,Ukhrul,Jessami,Jessami,PHC,Health@2026,,1115657452,Dr Raikhai,MO IC,9863435659,,,DKK3Sons
+233,Ukhrul,Ukhrul,Khangkhui Khullen,PHC,Health@2026,,5745377852,Hormirin Vashum,Pharmacist,8794361244,,,DKK3Sons
+234,Ukhrul,Ukhrul,Lambui,PHC,Health@2026,,4281827644,Dr Repent,MO,9939247178,,,DKK3Sons
+235,Ukhrul,Ukhrul,Mongkot Chepu,HWC,Health@2026,,4777157670,Kimneichong,ANM,9612937465,,,DKK3Sons
+236,Ukhrul,Ukhrul,Phungcham,HWC,Health@2026,,7855838160,Theiyaphi,CHO,8974583672,,,DKK3Sons
+237,Ukhrul,Ukhrul,Somdal,PHC,Health@2026,,6734627679,Thingpam,Gr-4,9612518778,,,DKK3Sons
+238,Ukhrul,Ukhrul,Tolloi,PHC,Health@2026,,1115635649,Songam,ANM,9863654164,,,DKK3Sons
+239,Ukhrul,Ukhrul,Sinakeithei,HWC,Health@2026,,1863417489,Chongamla,Nurse,9205979765,,,DKK3Sons
+240,Ukhrul,Ukhrul,Shirui,HWC,Health@2026,,8148185765,Soyaola,ANM,9612936781,,,DKK3Sons
