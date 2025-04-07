@@ -151,7 +151,7 @@ df_to_check_uniqueness = df[
     [
         health_center_code_col,
         username_col,
-        # contact_col
+        contact_col
     ]
 ]
 
