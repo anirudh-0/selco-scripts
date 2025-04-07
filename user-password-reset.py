@@ -1,20 +1,17 @@
 import json
 import requests
 import re
-import sys
-import copy
+import time
 
 
-with open("vendor-tenants-map.json", "r") as f:
+with open("vendor-tenants-map-karnataka.json", "r") as f:
     vendor_data = json.load(f)
 
 
 def update_user_password(tenant_id, mobile_number, username):
     url = "http://localhost:8081/user/v1/_search"
 
-    payload = json.dumps(
-        {"tenantId": tenant_id, "mobileNumber": mobile_number, "username": username}
-    )
+    payload = json.dumps({"tenantId": tenant_id, "mobileNumber": mobile_number})
     headers = {"Content-Type": "application/json"}
 
     response = requests.request("POST", url, headers=headers, data=payload)
@@ -26,8 +23,7 @@ def update_user_password(tenant_id, mobile_number, username):
         raise ValueError("User not created")
 
     user = users[0]
-    print(user)
-    sys.exit()
+    # return
     user["password"] = "Health@2026"
     user["dob"] = re.sub("-", "/", user["dob"])
     # new_roles = []
@@ -47,7 +43,7 @@ def update_user_password(tenant_id, mobile_number, username):
 
     # user["roles"] = new_roles
     # print(new_roles)
-    # # print(len(new_roles))
+    # print(len(new_roles))
     # return
 
     url = "http://localhost:8081/user/users/_updatenovalidate"
@@ -104,22 +100,26 @@ def update_user_password(tenant_id, mobile_number, username):
     headers = {"Content-Type": "application/json"}
 
     response = requests.request("POST", url, headers=headers, data=payload)
-    print(f"{tenant_id} | {response.json()["user"][0]["userName"]} | Health@2026")
+    try:
+        print(f"{tenant_id} | {response.json()["user"][0]["userName"]} | Health@2026")
+    except:
+        print(f"failed: {tenant_id}")
 
 
 # update_user_password("nl", "1111111111", "a")
 # update_user_password("nl", "1111111112", "a")
 # update_user_password("nl", "1111111113", "a")
 # update_user_password("nl", "1111111114", "a")
-update_user_password("pg.dummy", None, "selcoindia")
+# update_user_password("pg", "1111111115", "selcoindianew")
 
 
-# with open("output/pg/state-data/karnataka-user-data-phase-3-1.csv/tenants.json", "r") as f:
-#     data = json.load(f)
+with open("tenants.json", "r") as f:
+    data = json.load(f)
 
-# for tenant in data["tenants"]:
-#     mobile_number = tenant["contactNumber"]
-#     tenant_id = tenant["code"]
-#     username = re.sub(r"^PG-", "", tenant["city"]["code"])
-#     if mobile_number is not None and tenant_id is not None:
-#         update_user_password(tenant_id, mobile_number, None)
+for tenant in data["tenants"]:
+    mobile_number = tenant["contactNumber"]
+    tenant_id = tenant["code"]
+    username = re.sub(r"^PG-", "", tenant["city"]["code"])
+    if mobile_number is not None and tenant_id is not None:
+        update_user_password(tenant_id, mobile_number, None)
+        time.sleep(1)
