@@ -49,6 +49,19 @@ district_code_col = "District Code"
 block_code_col = "Block Code"
 username_col = "Username"
 
+# localized columns
+localized_columns = []
+for language in language_codes:
+    if language == "en_IN":
+        continue
+    for col in [
+        health_centre_name_col,
+        health_centre_type_col,
+        district_col,
+        block_col,
+    ]:
+        localized_columns.append(f"{col}-{language}")
+
 # read csv
 with open(health_centre_file_name, "rb") as f:
     result = chardet.detect(f.read(100000))
@@ -71,6 +84,7 @@ df = pd.read_csv(
         latitude_col,
         longitude_col,
         vendor_username_col,
+        *localized_columns,
     ],
     dtype=str,
     keep_default_na=False,
@@ -183,6 +197,32 @@ if len(block_code_filtered_df) > 0:
     print(block_code_filtered_df)
     raise ValueError("Invalid block codes")
 
+city_codes = (
+    full_df[health_center_code_col].apply(lambda x: {"code": x if x else tenant_id}).tolist()
+)
+
+city_module_mdms = {
+    "tenantId": tenant_id,
+    "moduleName": "tenant",
+    "citymodule": [
+        {
+            "module": "HRMS",
+            "code": "HRMS",
+            "active": True,
+            "order": 2,
+            "tenants": city_codes,
+        },
+        {
+            "module": "IM",
+            "code": "IM",
+            "bannerImage": "https://egov-uat-assets.s3.amazonaws.com/PGR.png",
+            "active": True,
+            "order": 2,
+            "tenants": city_codes,
+        },
+    ],
+}
+
 tenant_module_mdms = {
     "tenantId": tenant_id,
     "moduleName": "tenant",
@@ -242,6 +282,11 @@ os.makedirs(os.path.dirname(tenants_file_name), exist_ok=True)
 with open(tenants_file_name, "w") as f:
     json.dump(tenant_module_mdms, f, indent=2)
 
+city_module_file_name = f"output/{tenant_id}/citymodule.json"
+os.makedirs(os.path.dirname(city_module_file_name), exist_ok=True)
+
+with open(city_module_file_name, "w") as f:
+    json.dump(city_module_mdms, f, indent=2)
 
 df["Employees__employeeStatus"] = "EMPLOYED"
 df["Employees__user__relationship"] = "FATHER"
@@ -455,7 +500,6 @@ for module in modules:
     #     )
     #     .tolist()
     # )
-    print(messages[0])
     message_file_name = f"output/{tenant_id}/messages.json"
     os.makedirs(os.path.dirname(message_file_name), exist_ok=True)
     with open(message_file_name, "w") as f:
