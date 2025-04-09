@@ -5,9 +5,10 @@ import json
 import re
 import math
 import requests
+import time
 
 if len(sys.argv) < 2:
-    print("Usage python tenant-generator.py <users-data-file-path>")
+    print("Usage python user-generator.py <users-data-file-path>")
     sys.exit(1)
 
 users_file = sys.argv[1]
@@ -125,3 +126,4 @@ def save_user(user):
 
 for index, row in df.iterrows():
     save_user(row)
+    time.sleep(0.5)

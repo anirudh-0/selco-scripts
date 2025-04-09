@@ -1,11 +1,19 @@
 import json
 import requests
 import re
+import sys
 import time
 
 
-with open("vendor-tenants-map-karnataka.json", "r") as f:
-    vendor_data = json.load(f)
+if len(sys.argv) < 3:
+    print("Usage python user-password-reset.py <tenant-id> <tenants-json-file-path>")
+    sys.exit(1)
+
+tenant_id = sys.argv[1]
+tenants_file = sys.argv[2]
+
+# with open("vendor-tenants-map-karnataka.json", "r") as f:
+#     vendor_data = json.load(f)
 
 
 def update_user_password(tenant_id, mobile_number, username):
@@ -23,7 +31,6 @@ def update_user_password(tenant_id, mobile_number, username):
         raise ValueError("User not created")
 
     user = users[0]
-    # return
     user["password"] = "Health@2026"
     user["dob"] = re.sub("-", "/", user["dob"])
     # new_roles = []
@@ -113,13 +120,13 @@ def update_user_password(tenant_id, mobile_number, username):
 # update_user_password("pg", "1111111115", "selcoindianew")
 
 
-with open("tenants.json", "r") as f:
+with open(tenants_file, "r") as f:
     data = json.load(f)
 
 for tenant in data["tenants"]:
     mobile_number = tenant["contactNumber"]
-    tenant_id = tenant["code"]
-    username = re.sub(r"^PG-", "", tenant["city"]["code"])
-    if mobile_number is not None and tenant_id is not None:
-        update_user_password(tenant_id, mobile_number, None)
-        time.sleep(1)
+    sub_tenant_id = tenant["code"]
+    username = re.sub(fr"^{tenant_id.upper()}-", "", tenant["city"]["code"])
+    if mobile_number is not None and sub_tenant_id is not None:
+        update_user_password(sub_tenant_id, mobile_number, None)
+        time.sleep(0.2)
