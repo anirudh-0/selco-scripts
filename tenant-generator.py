@@ -161,9 +161,7 @@ if has_invalid_data:
     raise ValueError("Invalid Data found")
 
 
-df[district_code_col] = (
-    df[district_col].str.upper().str.replace(r"\s+", "", regex=True)
-)
+df[district_code_col] = df[district_col].str.upper().str.replace(r"\s+", "", regex=True)
 
 
 def block_code_gen(x):
@@ -473,19 +471,25 @@ modules = [
     # "rainmaker-hr",
 ]
 
+
+def message_gen(x):
+    formatted_health_centre_code = x[health_center_code_col].upper().replace(".", "_")
+    return (
+        {
+            "code": f"TENANT_TENANTS_{formatted_health_centre_code}",
+            "message": x[health_centre_name_col],
+            "module": "rainmaker-common",
+            "locale": "en_IN",
+        }
+        # re.sub("\.","_",x[health_center_code].upper())
+    )
+
+
 for module in modules:
     messages = (
         df[[health_center_code_col, health_centre_name_col]]
         .apply(
-            lambda x: (
-                {
-                    "code": f"TENANT_TENANTS_{x[health_center_code_col].upper().replace(".","_")}",
-                    "message": x[health_centre_name_col],
-                    "module": "rainmaker-common",
-                    "locale": "en_IN",
-                }
-                # re.sub("\.","_",x[health_center_code].upper())
-            ),
+            message_gen,
             axis=1,
         )
         .tolist()
