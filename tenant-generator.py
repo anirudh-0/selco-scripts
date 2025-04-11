@@ -147,13 +147,7 @@ df[health_center_code_col] = (
 
 # Uniqueness validation
 has_invalid_data = False
-df_to_check_uniqueness = df[
-    [
-        health_center_code_col,
-        username_col,
-        contact_col
-    ]
-]
+df_to_check_uniqueness = df[[health_center_code_col, username_col, contact_col]]
 
 for col in df_to_check_uniqueness.columns:
     duplicates = df[df.duplicated(subset=[col], keep=False)]
@@ -167,9 +161,19 @@ if has_invalid_data:
     raise ValueError("Invalid Data found")
 
 
-df[district_code_col] = df[district_col].str.upper().str.replace(r"\s+", "", regex=True)
+df[district_code_col] = (
+    df[district_col].str.upper().str.replace(r"\s+", "", regex=True)
+)
+
+
+def block_code_gen(x):
+    district_lower = re.sub(r"\s+", "", x[district_col].lower())
+    block_lower = re.sub(r"\s+", "", x[block_col].lower())
+    return f"{district_lower}.{block_lower}"
+
+
 df[block_code_col] = df[[district_col, block_col]].apply(
-    lambda x: f"{re.sub(r"\s+", "", x[district_col].lower())}.{re.sub(r"\s+", "", x[block_col].lower())}",
+    block_code_gen,
     axis=1,
 )
 
@@ -198,7 +202,9 @@ if len(block_code_filtered_df) > 0:
     raise ValueError("Invalid block codes")
 
 city_codes = (
-    full_df[health_center_code_col].apply(lambda x: {"code": x if x else tenant_id}).tolist()
+    full_df[health_center_code_col]
+    .apply(lambda x: {"code": x if x else tenant_id})
+    .tolist()
 )
 
 city_module_mdms = {
